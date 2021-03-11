@@ -22,6 +22,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,6 +42,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -70,6 +77,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -95,6 +104,35 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EF\Alphabetical_list_of_product.cs" />
+    <Compile Include="EF\Category.cs" />
+    <Compile Include="EF\Category_Sales_for_1997.cs" />
+    <Compile Include="EF\City.cs" />
+    <Compile Include="EF\Country.cs" />
+    <Compile Include="EF\Current_Product_List.cs" />
+    <Compile Include="EF\Customer.cs" />
+    <Compile Include="EF\CustomerDemographic.cs" />
+    <Compile Include="EF\Customer_and_Suppliers_by_City.cs" />
+    <Compile Include="EF\Employee.cs" />
+    <Compile Include="EF\Invoice.cs" />
+    <Compile Include="EF\NWDBContext.cs" />
+    <Compile Include="EF\Order.cs" />
+    <Compile Include="EF\Orders_Qry.cs" />
+    <Compile Include="EF\Order_Detail.cs" />
+    <Compile Include="EF\Order_Details_Extended.cs" />
+    <Compile Include="EF\Order_Subtotal.cs" />
+    <Compile Include="EF\Product.cs" />
+    <Compile Include="EF\Products_Above_Average_Price.cs" />
+    <Compile Include="EF\Products_by_Category.cs" />
+    <Compile Include="EF\Product_Sales_for_1997.cs" />
+    <Compile Include="EF\Region.cs" />
+    <Compile Include="EF\Sales_by_Category.cs" />
+    <Compile Include="EF\Sales_Totals_by_Amount.cs" />
+    <Compile Include="EF\Shipper.cs" />
+    <Compile Include="EF\Summary_of_Sales_by_Quarter.cs" />
+    <Compile Include="EF\Summary_of_Sales_by_Year.cs" />
+    <Compile Include="EF\Supplier.cs" />
+    <Compile Include="EF\Territory.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>
