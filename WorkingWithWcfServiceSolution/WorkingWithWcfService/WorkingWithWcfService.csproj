@@ -100,10 +100,12 @@
   <ItemGroup>
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
-    <Content Include="Service1.svc" />
+    <Content Include="Services\Service1.svc" />
+    <Content Include="Services\SalesManagement.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataContracts\CompositeType.cs" />
     <Compile Include="EF\Alphabetical_list_of_product.cs" />
     <Compile Include="EF\Category.cs" />
     <Compile Include="EF\Category_Sales_for_1997.cs" />
@@ -133,11 +135,15 @@
     <Compile Include="EF\Summary_of_Sales_by_Year.cs" />
     <Compile Include="EF\Supplier.cs" />
     <Compile Include="EF\Territory.cs" />
-    <Compile Include="Service1.svc.cs">
+    <Compile Include="Services\Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>
-    <Compile Include="IService1.cs" />
+    <Compile Include="ServiceContracts\IService1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceContracts\ISalesManagement.cs" />
+    <Compile Include="Services\SalesManagement.svc.cs">
+      <DependentUpon>SalesManagement.svc</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
