@@ -1,0 +1,8 @@
+F:\WorkingWithWCF\WCFClientSolution\WCFClient\obj\Debug\net5.0-windows\WCFClient.csprojAssemblyReference.cache
+F:\WorkingWithWCF\WCFClientSolution\WCFClient\obj\Debug\net5.0-windows\WCFClient.Form1.resources
+F:\WorkingWithWCF\WCFClientSolution\WCFClient\obj\Debug\net5.0-windows\WCFClient.frmAddSupplier.resources
+F:\WorkingWithWCF\WCFClientSolution\WCFClient\obj\Debug\net5.0-windows\WCFClient.csproj.GenerateResource.cache
+F:\WorkingWithWCF\WCFClientSolution\WCFClient\obj\Debug\net5.0-windows\WCFClient.GeneratedMSBuildEditorConfig.editorconfig
+F:\WorkingWithWCF\WCFClientSolution\WCFClient\obj\Debug\net5.0-windows\WCFClient.AssemblyInfoInputs.cache
+F:\WorkingWithWCF\WCFClientSolution\WCFClient\obj\Debug\net5.0-windows\WCFClient.AssemblyInfo.cs
+F:\WorkingWithWCF\WCFClientSolution\WCFClient\obj\Debug\net5.0-windows\WCFClient.csproj.CoreCompileInputs.cache
