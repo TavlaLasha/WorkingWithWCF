@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53289/Services/CatalogManagement.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WorkingWithWcfService.DataContracts" />
+  <xs:element name="GetSupplier">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="supplierId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSupplierResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WorkingWithWcfService.DataContracts" minOccurs="0" name="GetSupplierResult" nillable="true" type="q1:Suppliers" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSuppliers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSuppliersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WorkingWithWcfService.DataContracts" minOccurs="0" name="GetAllSuppliersResult" nillable="true" type="q2:ArrayOfSuppliers" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddSupplier">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="compname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contTitle" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="addrss" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ct" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rgn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pstCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cntry" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="phn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fx" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hmPage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddSupplierResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSupplier">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="supplierId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSupplierResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
