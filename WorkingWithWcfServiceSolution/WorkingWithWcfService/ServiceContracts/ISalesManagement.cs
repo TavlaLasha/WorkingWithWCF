@@ -15,9 +15,10 @@ namespace WorkingWithWcfService.ServiceContracts
         [OperationContract]
         List<Orders> GetAllOrder();
         [OperationContract]
-        Orders GetOrder(int orderId);
+        List<Orders> GetOrder(int orderId);
         [OperationContract]
         bool SaveOrder(int? id, string customerId, int? employeeId, DateTime? orderDate, DateTime? requiredDate, DateTime? shippedDate, int? shipVia, decimal? freight, string shipName, string shipAddress, string shipCity, string shipRegion, string shipPostalCode, string shipCountry);
+        [OperationContract]
         bool DeleteOrder(int id);
     }
 }

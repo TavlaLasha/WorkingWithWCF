@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53289/Services/SalesManagement.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WorkingWithWcfService.DataContracts" />
+  <xs:element name="GetAllOrder">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WorkingWithWcfService.DataContracts" minOccurs="0" name="GetAllOrderResult" nillable="true" type="q1:ArrayOfOrders" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orderId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WorkingWithWcfService.DataContracts" minOccurs="0" name="GetOrderResult" nillable="true" type="q2:ArrayOfOrders" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="customerId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="employeeId" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="orderDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="requiredDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="shippedDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="shipVia" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="freight" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="shipName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shipAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shipCity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shipRegion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shipPostalCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shipCountry" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveOrderResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteOrderResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -10,7 +10,7 @@ namespace WorkingWithWcfService.DataContracts
     public class Orders
     {
         [DataMember]
-        public int ID { get; set; }
+        public int Id { get; set; }
         [DataMember]
         public string CustomerID { get; set; }
         [DataMember]

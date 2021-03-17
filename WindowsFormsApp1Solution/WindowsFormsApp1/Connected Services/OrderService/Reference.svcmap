@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d71399fb-867e-4622-8c9b-fbbc300c539c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53289/Services/SalesManagement.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SalesManagement.xsd" MetadataType="Schema" ID="83052dee-1357-4c31-9888-46d770edeef4" SourceId="1" SourceUrl="http://localhost:53289/Services/SalesManagement.svc?xsd=xsd2" />
+    <MetadataFile FileName="SalesManagement.disco" MetadataType="Disco" ID="4dbe8a6b-d8ac-4d81-995c-4058f34db931" SourceId="1" SourceUrl="http://localhost:53289/Services/SalesManagement.svc?disco" />
+    <MetadataFile FileName="SalesManagement.wsdl" MetadataType="Wsdl" ID="b8ab81d6-c857-4f5d-a148-ba6715174c0c" SourceId="1" SourceUrl="http://localhost:53289/Services/SalesManagement.svc?wsdl" />
+    <MetadataFile FileName="SalesManagement1.xsd" MetadataType="Schema" ID="c8dbb6f4-4ea4-4854-a3d0-4ff2a0fb9a9e" SourceId="1" SourceUrl="http://localhost:53289/Services/SalesManagement.svc?xsd=xsd1" />
+    <MetadataFile FileName="SalesManagement2.xsd" MetadataType="Schema" ID="0520a726-0562-483d-8661-1b94b003fab6" SourceId="1" SourceUrl="http://localhost:53289/Services/SalesManagement.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

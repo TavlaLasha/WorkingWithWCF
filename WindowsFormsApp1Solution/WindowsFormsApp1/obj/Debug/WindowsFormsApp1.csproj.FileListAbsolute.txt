@@ -41,3 +41,4 @@ C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WindowsFormsApp1Solution\WindowsFor
 C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WindowsFormsApp1Solution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.frmAddSupplier.resources
 C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WindowsFormsApp1Solution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WindowsFormsApp1Solution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
+C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WindowsFormsApp1Solution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.frmOrder.resources

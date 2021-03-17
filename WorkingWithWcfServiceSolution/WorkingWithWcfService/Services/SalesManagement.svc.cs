@@ -41,7 +41,7 @@ namespace WorkingWithWcfService.Services
                     return true;
                 }
             }
-            catch (Exception)
+            catch (Exception ee)
             {
                 return false;
             }
@@ -55,7 +55,7 @@ namespace WorkingWithWcfService.Services
                 {
                     return db.Orders.Select(i => new Orders
                     {
-                        ID = i.OrderID,
+                        Id = i.OrderID,
                         CustomerID = i.CustomerID,
                         EmployeeID = i.EmployeeID,
                         OrderDate = i.OrderDate,
@@ -78,7 +78,7 @@ namespace WorkingWithWcfService.Services
             }
         }
 
-        public Orders GetOrder(int orderId)
+        public List<Orders> GetOrder(int orderId)
         {
             try
             {
@@ -86,7 +86,7 @@ namespace WorkingWithWcfService.Services
                 {
                     return db.Orders.Where(i => i.OrderID == orderId).Select(i => new Orders
                     {
-                        ID = i.OrderID,
+                        Id = i.OrderID,
                         CustomerID = i.CustomerID,
                         EmployeeID = i.EmployeeID,
                         OrderDate = i.OrderDate,
@@ -100,12 +100,12 @@ namespace WorkingWithWcfService.Services
                         ShipCountry = i.ShipCountry,
                         ShipPostalCode = i.ShipPostalCode,
                         ShipRegion = i.ShipRegion
-                    }).FirstOrDefault();
+                    }).ToList();
                 }
             }
             catch (Exception)
             {
-                return new Orders();
+                return new List<Orders>();
             }
         }
 
