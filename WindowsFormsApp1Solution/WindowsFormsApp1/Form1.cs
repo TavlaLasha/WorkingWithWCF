@@ -38,10 +38,10 @@ namespace WindowsFormsApp1
                 else if(WorkingWith == "Order")
                 {
                     var o = od.GetOrder(Id);
-                    if (!o.Any())
+                    if (o == null)
                         throw new Exception("Order not found!");
 
-                    dataGridView1.DataSource = o;
+                    dataGridView1.DataSource = new List<OrderService.OrderDTO> { o };
                 }
                 
             }
@@ -59,9 +59,10 @@ namespace WindowsFormsApp1
                     var ls = sv.GetAllSuppliers();
                     dataGridView1.DataSource = ls;
                 }
-                else if (WorkingWith == "Order")
+                else if (WorkingWith.Equals("Order"))
                 {
-                    var ods = od.GetAllOrder();
+                    int page = Convert.ToInt32(numericUpDown_page.Value);
+                    var ods = od.GetAllOrder(page, 10);
                     dataGridView1.DataSource = ods;
                 }
                 btn_edit.Enabled = true;

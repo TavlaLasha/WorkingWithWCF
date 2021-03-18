@@ -107,7 +107,7 @@
     <None Include="Connected Services\OrderService\SalesManagement2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\OrderService\WindowsFormsApp1.OrderService.Orders.datasource">
+    <None Include="Connected Services\OrderService\WindowsFormsApp1.OrderService.OrderDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServiceReference2\CatalogManagement.wsdl" />

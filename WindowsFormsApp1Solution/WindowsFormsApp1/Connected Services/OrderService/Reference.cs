@@ -15,9 +15,9 @@ namespace WindowsFormsApp1.OrderService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Orders", Namespace="http://schemas.datacontract.org/2004/07/WorkingWithWcfService.DataContracts")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OrderDTO", Namespace="http://schemas.datacontract.org/2004/07/WorkingWithWcfService.DataContracts")]
     [System.SerializableAttribute()]
-    public partial class Orders : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class OrderDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -271,22 +271,22 @@ namespace WindowsFormsApp1.OrderService {
     public interface ISalesManagement {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesManagement/GetAllOrder", ReplyAction="http://tempuri.org/ISalesManagement/GetAllOrderResponse")]
-        WindowsFormsApp1.OrderService.Orders[] GetAllOrder();
+        WindowsFormsApp1.OrderService.OrderDTO[] GetAllOrder(int pageNumber, int pageSize);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesManagement/GetAllOrder", ReplyAction="http://tempuri.org/ISalesManagement/GetAllOrderResponse")]
-        System.Threading.Tasks.Task<WindowsFormsApp1.OrderService.Orders[]> GetAllOrderAsync();
+        System.Threading.Tasks.Task<WindowsFormsApp1.OrderService.OrderDTO[]> GetAllOrderAsync(int pageNumber, int pageSize);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesManagement/GetOrder", ReplyAction="http://tempuri.org/ISalesManagement/GetOrderResponse")]
-        WindowsFormsApp1.OrderService.Orders[] GetOrder(int orderId);
+        WindowsFormsApp1.OrderService.OrderDTO GetOrder(int orderId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesManagement/GetOrder", ReplyAction="http://tempuri.org/ISalesManagement/GetOrderResponse")]
-        System.Threading.Tasks.Task<WindowsFormsApp1.OrderService.Orders[]> GetOrderAsync(int orderId);
+        System.Threading.Tasks.Task<WindowsFormsApp1.OrderService.OrderDTO> GetOrderAsync(int orderId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesManagement/SaveOrder", ReplyAction="http://tempuri.org/ISalesManagement/SaveOrderResponse")]
-        bool SaveOrder(System.Nullable<int> id, string customerId, System.Nullable<int> employeeId, System.Nullable<System.DateTime> orderDate, System.Nullable<System.DateTime> requiredDate, System.Nullable<System.DateTime> shippedDate, System.Nullable<int> shipVia, System.Nullable<decimal> freight, string shipName, string shipAddress, string shipCity, string shipRegion, string shipPostalCode, string shipCountry);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesManagement/AddOrder", ReplyAction="http://tempuri.org/ISalesManagement/AddOrderResponse")]
+        bool AddOrder(WindowsFormsApp1.OrderService.OrderDTO ob);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesManagement/SaveOrder", ReplyAction="http://tempuri.org/ISalesManagement/SaveOrderResponse")]
-        System.Threading.Tasks.Task<bool> SaveOrderAsync(System.Nullable<int> id, string customerId, System.Nullable<int> employeeId, System.Nullable<System.DateTime> orderDate, System.Nullable<System.DateTime> requiredDate, System.Nullable<System.DateTime> shippedDate, System.Nullable<int> shipVia, System.Nullable<decimal> freight, string shipName, string shipAddress, string shipCity, string shipRegion, string shipPostalCode, string shipCountry);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesManagement/AddOrder", ReplyAction="http://tempuri.org/ISalesManagement/AddOrderResponse")]
+        System.Threading.Tasks.Task<bool> AddOrderAsync(WindowsFormsApp1.OrderService.OrderDTO ob);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalesManagement/DeleteOrder", ReplyAction="http://tempuri.org/ISalesManagement/DeleteOrderResponse")]
         bool DeleteOrder(int id);
@@ -322,28 +322,28 @@ namespace WindowsFormsApp1.OrderService {
                 base(binding, remoteAddress) {
         }
         
-        public WindowsFormsApp1.OrderService.Orders[] GetAllOrder() {
-            return base.Channel.GetAllOrder();
+        public WindowsFormsApp1.OrderService.OrderDTO[] GetAllOrder(int pageNumber, int pageSize) {
+            return base.Channel.GetAllOrder(pageNumber, pageSize);
         }
         
-        public System.Threading.Tasks.Task<WindowsFormsApp1.OrderService.Orders[]> GetAllOrderAsync() {
-            return base.Channel.GetAllOrderAsync();
+        public System.Threading.Tasks.Task<WindowsFormsApp1.OrderService.OrderDTO[]> GetAllOrderAsync(int pageNumber, int pageSize) {
+            return base.Channel.GetAllOrderAsync(pageNumber, pageSize);
         }
         
-        public WindowsFormsApp1.OrderService.Orders[] GetOrder(int orderId) {
+        public WindowsFormsApp1.OrderService.OrderDTO GetOrder(int orderId) {
             return base.Channel.GetOrder(orderId);
         }
         
-        public System.Threading.Tasks.Task<WindowsFormsApp1.OrderService.Orders[]> GetOrderAsync(int orderId) {
+        public System.Threading.Tasks.Task<WindowsFormsApp1.OrderService.OrderDTO> GetOrderAsync(int orderId) {
             return base.Channel.GetOrderAsync(orderId);
         }
         
-        public bool SaveOrder(System.Nullable<int> id, string customerId, System.Nullable<int> employeeId, System.Nullable<System.DateTime> orderDate, System.Nullable<System.DateTime> requiredDate, System.Nullable<System.DateTime> shippedDate, System.Nullable<int> shipVia, System.Nullable<decimal> freight, string shipName, string shipAddress, string shipCity, string shipRegion, string shipPostalCode, string shipCountry) {
-            return base.Channel.SaveOrder(id, customerId, employeeId, orderDate, requiredDate, shippedDate, shipVia, freight, shipName, shipAddress, shipCity, shipRegion, shipPostalCode, shipCountry);
+        public bool AddOrder(WindowsFormsApp1.OrderService.OrderDTO ob) {
+            return base.Channel.AddOrder(ob);
         }
         
-        public System.Threading.Tasks.Task<bool> SaveOrderAsync(System.Nullable<int> id, string customerId, System.Nullable<int> employeeId, System.Nullable<System.DateTime> orderDate, System.Nullable<System.DateTime> requiredDate, System.Nullable<System.DateTime> shippedDate, System.Nullable<int> shipVia, System.Nullable<decimal> freight, string shipName, string shipAddress, string shipCity, string shipRegion, string shipPostalCode, string shipCountry) {
-            return base.Channel.SaveOrderAsync(id, customerId, employeeId, orderDate, requiredDate, shippedDate, shipVia, freight, shipName, shipAddress, shipCity, shipRegion, shipPostalCode, shipCountry);
+        public System.Threading.Tasks.Task<bool> AddOrderAsync(WindowsFormsApp1.OrderService.OrderDTO ob) {
+            return base.Channel.AddOrderAsync(ob);
         }
         
         public bool DeleteOrder(int id) {

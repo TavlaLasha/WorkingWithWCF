@@ -19,11 +19,11 @@
   <wsdl:message name="ISalesManagement_GetOrder_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetOrderResponse" />
   </wsdl:message>
-  <wsdl:message name="ISalesManagement_SaveOrder_InputMessage">
-    <wsdl:part name="parameters" element="tns:SaveOrder" />
+  <wsdl:message name="ISalesManagement_AddOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrder" />
   </wsdl:message>
-  <wsdl:message name="ISalesManagement_SaveOrder_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SaveOrderResponse" />
+  <wsdl:message name="ISalesManagement_AddOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrderResponse" />
   </wsdl:message>
   <wsdl:message name="ISalesManagement_DeleteOrder_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteOrder" />
@@ -40,9 +40,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ISalesManagement/GetOrder" message="tns:ISalesManagement_GetOrder_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISalesManagement/GetOrderResponse" message="tns:ISalesManagement_GetOrder_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="SaveOrder">
-      <wsdl:input wsaw:Action="http://tempuri.org/ISalesManagement/SaveOrder" message="tns:ISalesManagement_SaveOrder_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ISalesManagement/SaveOrderResponse" message="tns:ISalesManagement_SaveOrder_OutputMessage" />
+    <wsdl:operation name="AddOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISalesManagement/AddOrder" message="tns:ISalesManagement_AddOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISalesManagement/AddOrderResponse" message="tns:ISalesManagement_AddOrder_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="DeleteOrder">
       <wsdl:input wsaw:Action="http://tempuri.org/ISalesManagement/DeleteOrder" message="tns:ISalesManagement_DeleteOrder_InputMessage" />
@@ -69,8 +69,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="SaveOrder">
-      <soap:operation soapAction="http://tempuri.org/ISalesManagement/SaveOrder" style="document" />
+    <wsdl:operation name="AddOrder">
+      <soap:operation soapAction="http://tempuri.org/ISalesManagement/AddOrder" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

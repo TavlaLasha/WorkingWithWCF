@@ -14,7 +14,7 @@ namespace WorkingWithWcfService.ServiceContracts
     public interface ISalesManagement
     {
         [OperationContract]
-        List<OrderDTO> GetAllOrder();
+        List<OrderDTO> GetAllOrder(int pageNumber, int pageSize=10);
         [OperationContract]
         OrderDTO GetOrder(int orderId);
         [OperationContract]

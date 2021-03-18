@@ -46,13 +46,14 @@ namespace WorkingWithWcfService.Services
             }
         }
 
-        public List<OrderDTO> GetAllOrder()
+        public List<OrderDTO> GetAllOrder(int pageNumber, int pageSize=10)
         {
             try
             {
                 using (NWDBContext db = new NWDBContext())
                 {
-                    return db.Orders.Select(i => new OrderDTO
+                    var result = db.Orders.OrderByDescending(i => i.OrderDate).Skip((pageNumber - 1) * pageSize).Take(pageSize).AsQueryable();
+                    return result.Select(i => new OrderDTO
                     {
                         Id = i.OrderID,
                         CustomerID = i.CustomerID,
@@ -71,7 +72,7 @@ namespace WorkingWithWcfService.Services
                     }).ToList();
                 }
             }
-            catch (Exception)
+            catch (Exception ee)
             {
                 return new List<OrderDTO>();
             }

@@ -43,9 +43,11 @@ namespace WindowsFormsApp1
             this.customersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_edit = new System.Windows.Forms.Button();
+            this.numericUpDown_page = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_page)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -77,9 +79,9 @@ namespace WindowsFormsApp1
             this.btn_getall.Location = new System.Drawing.Point(449, 172);
             this.btn_getall.Margin = new System.Windows.Forms.Padding(2);
             this.btn_getall.Name = "btn_getall";
-            this.btn_getall.Size = new System.Drawing.Size(140, 19);
+            this.btn_getall.Size = new System.Drawing.Size(84, 25);
             this.btn_getall.TabIndex = 2;
-            this.btn_getall.Text = "Get All";
+            this.btn_getall.Text = "Go";
             this.btn_getall.UseVisualStyleBackColor = true;
             this.btn_getall.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -188,11 +190,34 @@ namespace WindowsFormsApp1
             this.btn_edit.UseVisualStyleBackColor = true;
             this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
+            // numericUpDown_page
+            // 
+            this.numericUpDown_page.Location = new System.Drawing.Point(449, 147);
+            this.numericUpDown_page.Maximum = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
+            this.numericUpDown_page.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown_page.Name = "numericUpDown_page";
+            this.numericUpDown_page.Size = new System.Drawing.Size(84, 20);
+            this.numericUpDown_page.TabIndex = 7;
+            this.numericUpDown_page.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(600, 397);
+            this.Controls.Add(this.numericUpDown_page);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.btn_add);
@@ -209,6 +234,7 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_page)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,6 +256,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ToolStripMenuItem customersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem employeesToolStripMenuItem;
         private System.Windows.Forms.Button btn_edit;
+        private System.Windows.Forms.NumericUpDown numericUpDown_page;
     }
 }
 
