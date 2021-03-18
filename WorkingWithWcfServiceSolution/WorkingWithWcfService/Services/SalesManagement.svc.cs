@@ -14,29 +14,28 @@ namespace WorkingWithWcfService.Services
     // NOTE: In order to launch WCF Test Client for testing this service, please select SalesManagement.svc or SalesManagement.svc.cs at the Solution Explorer and start debugging.
     public class SalesManagement : ISalesManagement
     {
-        public bool SaveOrder(int? id, string customerId, int? employeeId, DateTime? orderDate, DateTime? requiredDate, DateTime? shippedDate, int? shipVia, decimal? freight, string shipName, string shipAddress, string shipCity, string shipRegion, string shipPostalCode, string shipCountry)
+        public bool AddOrder(OrderDTO ob)
         {
             try
             {
                 using (NWDBContext db = new NWDBContext())
                 {
-                    Order od = (!id.HasValue) ? new Order() : db.Orders.Where(i => i.OrderID == id).FirstOrDefault();
+                    Order od = new Order();
 
-                    od.CustomerID = customerId;
-                    od.EmployeeID = employeeId;
-                    od.OrderDate = orderDate;
-                    od.RequiredDate = requiredDate;
-                    od.ShippedDate = shippedDate;
-                    od.ShipVia = shipVia;
-                    od.Freight = freight;
-                    od.ShipName = shipName;
-                    od.ShipAddress = shipAddress;
-                    od.ShipCity = shipCity;
-                    od.ShipCountry = shipCountry;
-                    od.ShipPostalCode = shipPostalCode;
-                    od.ShipRegion = shipRegion;
-                    if (!id.HasValue)
-                        db.Orders.Add(od);
+                    od.CustomerID = ob.CustomerID;
+                    od.EmployeeID = ob.EmployeeID;
+                    od.OrderDate = ob.OrderDate;
+                    od.RequiredDate = ob.RequiredDate;
+                    od.ShippedDate = ob.ShippedDate;
+                    od.ShipVia = ob.ShipVia;
+                    od.Freight = ob.Freight;
+                    od.ShipName = ob.ShipName;
+                    od.ShipAddress = ob.ShipAddress;
+                    od.ShipCity = ob.ShipCity;
+                    od.ShipCountry = ob.ShipCountry;
+                    od.ShipPostalCode = ob.ShipPostalCode;
+                    od.ShipRegion = ob.ShipRegion;
+                    db.Orders.Add(od);
                     db.SaveChanges();
                     return true;
                 }
@@ -47,13 +46,13 @@ namespace WorkingWithWcfService.Services
             }
         }
 
-        public List<Orders> GetAllOrder()
+        public List<OrderDTO> GetAllOrder()
         {
             try
             {
                 using (NWDBContext db = new NWDBContext())
                 {
-                    return db.Orders.Select(i => new Orders
+                    return db.Orders.Select(i => new OrderDTO
                     {
                         Id = i.OrderID,
                         CustomerID = i.CustomerID,
@@ -74,17 +73,20 @@ namespace WorkingWithWcfService.Services
             }
             catch (Exception)
             {
-                return new List<Orders>();
+                return new List<OrderDTO>();
             }
         }
 
-        public List<Orders> GetOrder(int orderId)
+        public OrderDTO GetOrder(int orderId)
         {
             try
             {
                 using (NWDBContext db = new NWDBContext())
                 {
-                    return db.Orders.Where(i => i.OrderID == orderId).Select(i => new Orders
+                    if (!db.Orders.Any(i => i.OrderID == orderId))
+                        throw new Exception("Order Not Found");
+
+                    return db.Orders.Where(i => i.OrderID == orderId).Select(i => new OrderDTO
                     {
                         Id = i.OrderID,
                         CustomerID = i.CustomerID,
@@ -100,12 +102,12 @@ namespace WorkingWithWcfService.Services
                         ShipCountry = i.ShipCountry,
                         ShipPostalCode = i.ShipPostalCode,
                         ShipRegion = i.ShipRegion
-                    }).ToList();
+                    }).First();
                 }
             }
             catch (Exception)
             {
-                return new List<Orders>();
+                return new OrderDTO();
             }
         }
 
@@ -116,7 +118,7 @@ namespace WorkingWithWcfService.Services
                 using (NWDBContext db = new NWDBContext())
                 {
                     if (!db.Orders.Any(i => i.OrderID == id))
-                        throw new Exception("Student Not Found!");
+                        throw new Exception("Order Not Found!");
 
                     Order od =  db.Orders.Where(i => i.OrderID == id).First();
                     db.Orders.Remove(od);

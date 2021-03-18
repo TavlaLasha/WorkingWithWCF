@@ -7,7 +7,7 @@ using System.Web;
 namespace WorkingWithWcfService.DataContracts
 {
     [DataContract]
-    public class Orders
+    public class OrderDTO
     {
         [DataMember]
         public int Id { get; set; }
