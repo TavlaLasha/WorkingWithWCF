@@ -108,7 +108,7 @@
   <ItemGroup>
     <Compile Include="DataContracts\CompositeType.cs" />
     <Compile Include="DataContracts\OrderDTO.cs" />
-    <Compile Include="DataContracts\Suppliers.cs" />
+    <Compile Include="DataContracts\SupplierDTO.cs" />
     <Compile Include="EF\Alphabetical_list_of_product.cs" />
     <Compile Include="EF\Category.cs" />
     <Compile Include="EF\Category_Sales_for_1997.cs" />

@@ -13,14 +13,14 @@ namespace WorkingWithWcfService.ServiceContracts
     public interface ICatalogManagement
     {
         [OperationContract]
-        Suppliers GetSupplier(int supplierId);
+        SupplierDTO GetSupplier(int supplierId);
 
         [OperationContract]
-        List<Suppliers> GetAllSuppliers();
+        List<SupplierDTO> GetAllSuppliers();
         [OperationContract]
-        void AddSupplier(string compname, string contName, string contTitle, string addrss, string ct, string rgn, string pstCode, string cntry, string phn, string fx, string hmPage);
+        bool AddSupplier(SupplierDTO ob);
         [OperationContract]
-        void DeleteSupplier(int supplierId);
+        bool DeleteSupplier(int supplierId);
 
     }
 }

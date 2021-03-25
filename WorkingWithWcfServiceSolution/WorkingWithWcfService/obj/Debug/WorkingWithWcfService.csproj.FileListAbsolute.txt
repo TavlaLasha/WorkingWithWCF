@@ -45,3 +45,4 @@ F:\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\obj\Debug\
 F:\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\obj\Debug\WorkingWithWcfService.csproj.CopyComplete
 F:\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\obj\Debug\WorkingWithWcfService.dll
 F:\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\obj\Debug\WorkingWithWcfService.pdb
+F:\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\obj\Debug\WorkingWithWcfService.csprojAssemblyReference.cache

@@ -7,7 +7,7 @@ using System.Runtime.Serialization;
 namespace WorkingWithWcfService.DataContracts
 {
     [DataContract]
-    public class Suppliers
+    public class SupplierDTO
     {
         [DataMember]
         public int Id { get; set; }

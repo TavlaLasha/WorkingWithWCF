@@ -14,78 +14,114 @@ namespace WorkingWithWcfService.Services
     // NOTE: In order to launch WCF Test Client for testing this service, please select CatalogManagement.svc or CatalogManagement.svc.cs at the Solution Explorer and start debugging.
     public class CatalogManagement : ICatalogManagement
     {
-        public void AddSupplier(string compname, string contName, string contTitle, string addrss, string ct, string rgn, string pstCode, string cntry, string phn, string fx, string hmPage)
+        public bool AddSupplier(SupplierDTO ob)
         {
-            using (NWDBContext db = new NWDBContext())
+            try
             {
-                Supplier s = new Supplier();
-                s.CompanyName = compname;
-                s.ContactName = contName;
-                s.ContactTitle = contTitle;
-                s.Address = addrss;
-                s.City = ct;
-                s.Region = rgn;
-                s.PostalCode = pstCode;
-                s.Country = cntry;
-                s.Phone = phn;
-                s.Fax = fx;
-                s.HomePage = hmPage;
-                db.Suppliers.Add(s);
-                db.SaveChanges();
-            }
-        }
-
-        public void DeleteSupplier(int supplierId)
-        {
-            using (NWDBContext db = new NWDBContext())
-            {
-                Supplier s = db.Suppliers.Where(i => i.SupplierID.Equals(supplierId)).First();
-                db.Suppliers.Remove(s);
-                db.SaveChanges();
-            }
-        }
-
-        public List<Suppliers> GetAllSuppliers()
-        {
-            using (NWDBContext db = new NWDBContext())
-            {
-                return db.Suppliers.Select(i => new Suppliers
+                using (NWDBContext db = new NWDBContext())
                 {
-                    Id = i.SupplierID,
-                    CompName = i.CompanyName,
-                    ContName = i.ContactName,
-                    ContTitle = i.ContactTitle,
-                    Addrss = i.Address,
-                    Ct = i.City,
-                    Rgn = i.Region,
-                    PstCode = i.PostalCode,
-                    Cntry = i.Country,
-                    Phn = i.Phone,
-                    Fx = i.Fax,
-                    HmPage = i.HomePage
-            }).ToList();
+                    Supplier s = new Supplier();
+                    s.CompanyName = ob.CompName;
+                    s.ContactName = ob.ContName;
+                    s.ContactTitle = ob.ContTitle;
+                    s.Address = ob.Addrss;
+                    s.City = ob.Ct;
+                    s.Region = ob.Rgn;
+                    s.PostalCode = ob.PstCode;
+                    s.Country = ob.Cntry;
+                    s.Phone = ob.Phn;
+                    s.Fax = ob.Fx;
+                    s.HomePage = ob.HmPage;
+                    db.Suppliers.Add(s);
+                    db.SaveChanges();
+                    return true;
+                }
+            }
+            catch (Exception )
+            {
+                return false;
             }
         }
 
-        public Suppliers GetSupplier(int supplierId)
+        public bool DeleteSupplier(int supplierId)
         {
-            using (NWDBContext db = new NWDBContext())
+            try
             {
-                return db.Suppliers.Where(i => i.SupplierID == supplierId).Select(i => new Suppliers
+                using (NWDBContext db = new NWDBContext())
                 {
-                    Id = i.SupplierID,
-                    CompName = i.CompanyName,
-                    ContName = i.ContactName,
-                    ContTitle = i.ContactTitle,
-                    Addrss = i.Address,
-                    Ct = i.City,
-                    Rgn = i.Region,
-                    PstCode = i.PostalCode,
-                    Cntry = i.Country,
-                    Phn = i.Phone,
-                    Fx = i.Fax,
-                    HmPage = i.HomePage
-                }).FirstOrDefault();
+                    if (!db.Suppliers.Any(i => i.SupplierID == supplierId))
+                        throw new Exception("Order Not Found!");
+
+                    Supplier od = db.Suppliers.Where(i => i.SupplierID == supplierId).First();
+                    db.Suppliers.Remove(od);
+                    db.SaveChanges();
+                    return true;
+                }
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+        }
+
+        public List<SupplierDTO> GetAllSuppliers()
+        {
+            try
+            {
+                using (NWDBContext db = new NWDBContext())
+                {
+                    return db.Suppliers.Select(i => new SupplierDTO
+                    {
+                        Id = i.SupplierID,
+                        CompName = i.CompanyName,
+                        ContName = i.ContactName,
+                        ContTitle = i.ContactTitle,
+                        Addrss = i.Address,
+                        Ct = i.City,
+                        Rgn = i.Region,
+                        PstCode = i.PostalCode,
+                        Cntry = i.Country,
+                        Phn = i.Phone,
+                        Fx = i.Fax,
+                        HmPage = i.HomePage
+                    }).ToList();
+                }
+            }
+            catch (Exception)
+            {
+
+                return new List<SupplierDTO>();
+            }
+        }
+
+        public SupplierDTO GetSupplier(int supplierId)
+        {
+            try
+            {
+                using (NWDBContext db = new NWDBContext())
+                {
+                    return db.Suppliers.Where(i => i.SupplierID == supplierId).Select(i => new SupplierDTO
+                    {
+                        Id = i.SupplierID,
+                        CompName = i.CompanyName,
+                        ContName = i.ContactName,
+                        ContTitle = i.ContactTitle,
+                        Addrss = i.Address,
+                        Ct = i.City,
+                        Rgn = i.Region,
+                        PstCode = i.PostalCode,
+                        Cntry = i.Country,
+                        Phn = i.Phone,
+                        Fx = i.Fax,
+                        HmPage = i.HomePage
+                    }).FirstOrDefault();
+                }
+            }
+            catch (Exception)
+            {
+
+                return new SupplierDTO();
             }
         }
     }
