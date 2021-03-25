@@ -15,9 +15,9 @@ namespace WindowsFormsApp1.ServiceReference2 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Suppliers", Namespace="http://schemas.datacontract.org/2004/07/WorkingWithWcfService.DataContracts")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SupplierDTO", Namespace="http://schemas.datacontract.org/2004/07/WorkingWithWcfService.DataContracts")]
     [System.SerializableAttribute()]
-    public partial class Suppliers : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class SupplierDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -239,28 +239,28 @@ namespace WindowsFormsApp1.ServiceReference2 {
     public interface ICatalogManagement {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICatalogManagement/GetSupplier", ReplyAction="http://tempuri.org/ICatalogManagement/GetSupplierResponse")]
-        WindowsFormsApp1.ServiceReference2.Suppliers GetSupplier(int supplierId);
+        WindowsFormsApp1.ServiceReference2.SupplierDTO GetSupplier(int supplierId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICatalogManagement/GetSupplier", ReplyAction="http://tempuri.org/ICatalogManagement/GetSupplierResponse")]
-        System.Threading.Tasks.Task<WindowsFormsApp1.ServiceReference2.Suppliers> GetSupplierAsync(int supplierId);
+        System.Threading.Tasks.Task<WindowsFormsApp1.ServiceReference2.SupplierDTO> GetSupplierAsync(int supplierId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICatalogManagement/GetAllSuppliers", ReplyAction="http://tempuri.org/ICatalogManagement/GetAllSuppliersResponse")]
-        WindowsFormsApp1.ServiceReference2.Suppliers[] GetAllSuppliers();
+        WindowsFormsApp1.ServiceReference2.SupplierDTO[] GetAllSuppliers();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICatalogManagement/GetAllSuppliers", ReplyAction="http://tempuri.org/ICatalogManagement/GetAllSuppliersResponse")]
-        System.Threading.Tasks.Task<WindowsFormsApp1.ServiceReference2.Suppliers[]> GetAllSuppliersAsync();
+        System.Threading.Tasks.Task<WindowsFormsApp1.ServiceReference2.SupplierDTO[]> GetAllSuppliersAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICatalogManagement/AddSupplier", ReplyAction="http://tempuri.org/ICatalogManagement/AddSupplierResponse")]
-        void AddSupplier(string compname, string contName, string contTitle, string addrss, string ct, string rgn, string pstCode, string cntry, string phn, string fx, string hmPage);
+        bool AddSupplier(WindowsFormsApp1.ServiceReference2.SupplierDTO ob);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICatalogManagement/AddSupplier", ReplyAction="http://tempuri.org/ICatalogManagement/AddSupplierResponse")]
-        System.Threading.Tasks.Task AddSupplierAsync(string compname, string contName, string contTitle, string addrss, string ct, string rgn, string pstCode, string cntry, string phn, string fx, string hmPage);
+        System.Threading.Tasks.Task<bool> AddSupplierAsync(WindowsFormsApp1.ServiceReference2.SupplierDTO ob);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICatalogManagement/DeleteSupplier", ReplyAction="http://tempuri.org/ICatalogManagement/DeleteSupplierResponse")]
-        void DeleteSupplier(int supplierId);
+        bool DeleteSupplier(int supplierId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICatalogManagement/DeleteSupplier", ReplyAction="http://tempuri.org/ICatalogManagement/DeleteSupplierResponse")]
-        System.Threading.Tasks.Task DeleteSupplierAsync(int supplierId);
+        System.Threading.Tasks.Task<bool> DeleteSupplierAsync(int supplierId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -290,35 +290,35 @@ namespace WindowsFormsApp1.ServiceReference2 {
                 base(binding, remoteAddress) {
         }
         
-        public WindowsFormsApp1.ServiceReference2.Suppliers GetSupplier(int supplierId) {
+        public WindowsFormsApp1.ServiceReference2.SupplierDTO GetSupplier(int supplierId) {
             return base.Channel.GetSupplier(supplierId);
         }
         
-        public System.Threading.Tasks.Task<WindowsFormsApp1.ServiceReference2.Suppliers> GetSupplierAsync(int supplierId) {
+        public System.Threading.Tasks.Task<WindowsFormsApp1.ServiceReference2.SupplierDTO> GetSupplierAsync(int supplierId) {
             return base.Channel.GetSupplierAsync(supplierId);
         }
         
-        public WindowsFormsApp1.ServiceReference2.Suppliers[] GetAllSuppliers() {
+        public WindowsFormsApp1.ServiceReference2.SupplierDTO[] GetAllSuppliers() {
             return base.Channel.GetAllSuppliers();
         }
         
-        public System.Threading.Tasks.Task<WindowsFormsApp1.ServiceReference2.Suppliers[]> GetAllSuppliersAsync() {
+        public System.Threading.Tasks.Task<WindowsFormsApp1.ServiceReference2.SupplierDTO[]> GetAllSuppliersAsync() {
             return base.Channel.GetAllSuppliersAsync();
         }
         
-        public void AddSupplier(string compname, string contName, string contTitle, string addrss, string ct, string rgn, string pstCode, string cntry, string phn, string fx, string hmPage) {
-            base.Channel.AddSupplier(compname, contName, contTitle, addrss, ct, rgn, pstCode, cntry, phn, fx, hmPage);
+        public bool AddSupplier(WindowsFormsApp1.ServiceReference2.SupplierDTO ob) {
+            return base.Channel.AddSupplier(ob);
         }
         
-        public System.Threading.Tasks.Task AddSupplierAsync(string compname, string contName, string contTitle, string addrss, string ct, string rgn, string pstCode, string cntry, string phn, string fx, string hmPage) {
-            return base.Channel.AddSupplierAsync(compname, contName, contTitle, addrss, ct, rgn, pstCode, cntry, phn, fx, hmPage);
+        public System.Threading.Tasks.Task<bool> AddSupplierAsync(WindowsFormsApp1.ServiceReference2.SupplierDTO ob) {
+            return base.Channel.AddSupplierAsync(ob);
         }
         
-        public void DeleteSupplier(int supplierId) {
-            base.Channel.DeleteSupplier(supplierId);
+        public bool DeleteSupplier(int supplierId) {
+            return base.Channel.DeleteSupplier(supplierId);
         }
         
-        public System.Threading.Tasks.Task DeleteSupplierAsync(int supplierId) {
+        public System.Threading.Tasks.Task<bool> DeleteSupplierAsync(int supplierId) {
             return base.Channel.DeleteSupplierAsync(supplierId);
         }
     }

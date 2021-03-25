@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using WindowsFormsApp1.ServiceReference2;
 namespace WindowsFormsApp1
 {
     public partial class frmAddSupplier : Form
@@ -22,19 +22,25 @@ namespace WindowsFormsApp1
         {
             try
             {
-                string CompName = txtBox_compName.Text;
-                string ContName = txtBox_contName.Text;
-                string ContTitle = txtBox_contTitle.Text;
-                string Addrss = txtBox_address.Text;
-                string ct = txtBox_city.Text;
-                string Rgn = txtBox_region.Text;
-                string PstCode = txtBox_postalCode.Text;
-                string Cntry = txtBox_country.Text;
-                string Phn = txtBox_phone.Text;
-                string Fx = txtBox_fax.Text;
-                string HmPage = txtBox_homePage.Text;
-                sv.AddSupplier(CompName, ContName, ContTitle, Addrss, ct, Rgn, PstCode, Cntry, Phn, Fx, HmPage);
-                MessageBox.Show("Success");
+                SupplierDTO s = new SupplierDTO();
+
+                s.CompName = txtBox_compName.Text;
+                s.ContName = txtBox_contName.Text;
+                s.ContTitle = txtBox_contTitle.Text;
+                s.Addrss = txtBox_address.Text;
+                s.Ct = txtBox_city.Text;
+                s.Rgn = txtBox_region.Text;
+                s.PstCode = txtBox_postalCode.Text;
+                s.Cntry = txtBox_country.Text;
+                s.Phn = txtBox_phone.Text;
+                s.Fx = txtBox_fax.Text;
+                s.HmPage = txtBox_homePage.Text;
+                sv.AddSupplier(s);
+                bool JobDone = sv.AddSupplier(s);
+                if (!JobDone)
+                    throw new Exception("Failed to save supplier");
+
+                MessageBox.Show("Operation Successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception)
             {

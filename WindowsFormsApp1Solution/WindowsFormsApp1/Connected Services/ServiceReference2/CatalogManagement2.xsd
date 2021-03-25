@@ -11,7 +11,7 @@
   <xs:element name="GetSupplierResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WorkingWithWcfService.DataContracts" minOccurs="0" name="GetSupplierResult" nillable="true" type="q1:Suppliers" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WorkingWithWcfService.DataContracts" minOccurs="0" name="GetSupplierResult" nillable="true" type="q1:SupplierDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -23,30 +23,22 @@
   <xs:element name="GetAllSuppliersResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WorkingWithWcfService.DataContracts" minOccurs="0" name="GetAllSuppliersResult" nillable="true" type="q2:ArrayOfSuppliers" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WorkingWithWcfService.DataContracts" minOccurs="0" name="GetAllSuppliersResult" nillable="true" type="q2:ArrayOfSupplierDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddSupplier">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="compname" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="contName" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="contTitle" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="addrss" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="ct" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="rgn" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pstCode" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="cntry" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="phn" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="fx" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="hmPage" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WorkingWithWcfService.DataContracts" minOccurs="0" name="ob" nillable="true" type="q3:SupplierDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddSupplierResponse">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddSupplierResult" type="xs:boolean" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="DeleteSupplier">
@@ -58,7 +50,9 @@
   </xs:element>
   <xs:element name="DeleteSupplierResponse">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteSupplierResult" type="xs:boolean" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
 </xs:schema>

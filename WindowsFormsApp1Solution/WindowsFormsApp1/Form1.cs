@@ -33,7 +33,8 @@ namespace WindowsFormsApp1
                     var r = sv.GetSupplier(Id);
                     if (r == null)
                         throw new Exception("Supplier not found!");
-                    MessageBox.Show($"Supplier with an id of {Id} - {r.CompName}.");
+                    dataGridView1.DataSource = new List<ServiceReference2.SupplierDTO> { r };
+                    //MessageBox.Show($"Supplier with an id of {Id} - {r.CompName}.");
                 }
                 else if(WorkingWith == "Order")
                 {
@@ -54,7 +55,7 @@ namespace WindowsFormsApp1
         {
             try
             {
-                if (WorkingWith == "Supplier")
+                if (WorkingWith.Equals("Supplier"))
                 {
                     var ls = sv.GetAllSuppliers();
                     dataGridView1.DataSource = ls;

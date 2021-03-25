@@ -120,7 +120,7 @@
     <None Include="Connected Services\ServiceReference2\CatalogManagement2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference2\WindowsFormsApp1.ServiceReference2.Suppliers.datasource">
+    <None Include="Connected Services\ServiceReference2\WindowsFormsApp1.ServiceReference2.SupplierDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
