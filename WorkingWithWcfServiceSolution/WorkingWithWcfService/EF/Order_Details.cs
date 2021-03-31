@@ -7,7 +7,7 @@ namespace WorkingWithWcfService.EF
     using System.Data.Entity.Spatial;
 
     [Table("Sales.Order Details")]
-    public partial class Order_Detail
+    public partial class Order_Details
     {
         [Key]
         [Column(Order = 0)]
@@ -26,8 +26,8 @@ namespace WorkingWithWcfService.EF
 
         public float Discount { get; set; }
 
-        public virtual Product Product { get; set; }
+        public virtual Products Products { get; set; }
 
-        public virtual Order Order { get; set; }
+        public virtual Orders Orders { get; set; }
     }
 }

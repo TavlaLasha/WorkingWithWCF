@@ -7,14 +7,15 @@ namespace WorkingWithWcfService.EF
     using System.Data.Entity.Spatial;
 
     [Table("Sales.Orders")]
-    public partial class Order
+    public partial class Orders
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Order()
+        public Orders()
         {
-            Order_Details = new HashSet<Order_Detail>();
+            Order_Details = new HashSet<Order_Details>();
         }
 
+        [Key]
         public int OrderID { get; set; }
 
         [StringLength(5)]
@@ -51,13 +52,13 @@ namespace WorkingWithWcfService.EF
         [StringLength(15)]
         public string ShipCountry { get; set; }
 
-        public virtual Shipper Shipper { get; set; }
+        public virtual Shippers Shippers { get; set; }
 
-        public virtual Customer Customer { get; set; }
+        public virtual Customers Customers { get; set; }
 
-        public virtual Employee Employee { get; set; }
+        public virtual Employees Employees { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order_Detail> Order_Details { get; set; }
+        public virtual ICollection<Order_Details> Order_Details { get; set; }
     }
 }

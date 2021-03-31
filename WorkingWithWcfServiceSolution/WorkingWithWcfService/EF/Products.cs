@@ -6,16 +6,19 @@ namespace WorkingWithWcfService.EF
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Alphabetical list of products")]
-    public partial class Alphabetical_list_of_product
+    [Table("Catalogs.Products")]
+    public partial class Products
     {
-        [Key]
-        [Column(Order = 0)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ProductID { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Products()
+        {
+            Order_Details = new HashSet<Order_Details>();
+        }
 
         [Key]
-        [Column(Order = 1)]
+        public int ProductID { get; set; }
+
+        [Required]
         [StringLength(40)]
         public string ProductName { get; set; }
 
@@ -35,13 +38,13 @@ namespace WorkingWithWcfService.EF
 
         public short? ReorderLevel { get; set; }
 
-        [Key]
-        [Column(Order = 2)]
         public bool Discontinued { get; set; }
 
-        [Key]
-        [Column(Order = 3)]
-        [StringLength(15)]
-        public string CategoryName { get; set; }
+        public virtual Categories Categories { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Order_Details> Order_Details { get; set; }
+
+        public virtual Suppliers Suppliers { get; set; }
     }
 }

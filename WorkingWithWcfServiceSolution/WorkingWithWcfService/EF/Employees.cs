@@ -7,16 +7,17 @@ namespace WorkingWithWcfService.EF
     using System.Data.Entity.Spatial;
 
     [Table("Employees.Employees")]
-    public partial class Employee
+    public partial class Employees
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Employee()
+        public Employees()
         {
-            Employees1 = new HashSet<Employee>();
-            Orders = new HashSet<Order>();
-            Territories = new HashSet<Territory>();
+            Employees1 = new HashSet<Employees>();
+            Orders = new HashSet<Orders>();
+            Territories = new HashSet<Territories>();
         }
 
+        [Key]
         public int EmployeeID { get; set; }
 
         [Required]
@@ -67,19 +68,19 @@ namespace WorkingWithWcfService.EF
         [StringLength(255)]
         public string PhotoPath { get; set; }
 
-        public virtual City City { get; set; }
+        public virtual Cities Cities { get; set; }
 
-        public virtual Country Country { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Employee> Employees1 { get; set; }
-
-        public virtual Employee Employee1 { get; set; }
+        public virtual Countries Countries { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Employees> Employees1 { get; set; }
+
+        public virtual Employees Employees2 { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Territory> Territories { get; set; }
+        public virtual ICollection<Orders> Orders { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Territories> Territories { get; set; }
     }
 }

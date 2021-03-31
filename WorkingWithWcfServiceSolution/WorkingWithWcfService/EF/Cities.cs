@@ -7,12 +7,12 @@ namespace WorkingWithWcfService.EF
     using System.Data.Entity.Spatial;
 
     [Table("Catalogs.Cities")]
-    public partial class City
+    public partial class Cities
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public City()
+        public Cities()
         {
-            Employees = new HashSet<Employee>();
+            Employees = new HashSet<Employees>();
         }
 
         public int ID { get; set; }
@@ -23,9 +23,9 @@ namespace WorkingWithWcfService.EF
 
         public int CountryID { get; set; }
 
-        public virtual Country Country { get; set; }
+        public virtual Countries Countries { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Employee> Employees { get; set; }
+        public virtual ICollection<Employees> Employees { get; set; }
     }
 }

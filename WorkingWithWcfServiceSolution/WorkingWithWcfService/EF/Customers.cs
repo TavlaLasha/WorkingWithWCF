@@ -6,16 +6,19 @@ namespace WorkingWithWcfService.EF
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Catalogs.Suppliers")]
-    public partial class Supplier
+    [Table("Customers.Customers")]
+    public partial class Customers
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Supplier()
+        public Customers()
         {
-            Products = new HashSet<Product>();
+            Orders = new HashSet<Orders>();
+            CustomerDemographics = new HashSet<CustomerDemographics>();
         }
 
-        public int SupplierID { get; set; }
+        [Key]
+        [StringLength(5)]
+        public string CustomerID { get; set; }
 
         [Required]
         [StringLength(40)]
@@ -48,10 +51,10 @@ namespace WorkingWithWcfService.EF
         [StringLength(24)]
         public string Fax { get; set; }
 
-        [Column(TypeName = "ntext")]
-        public string HomePage { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Orders> Orders { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<CustomerDemographics> CustomerDemographics { get; set; }
     }
 }

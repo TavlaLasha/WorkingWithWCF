@@ -12,7 +12,7 @@ namespace WorkingWithWcfService.EF
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Region()
         {
-            Territories = new HashSet<Territory>();
+            Territories = new HashSet<Territories>();
         }
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
@@ -23,6 +23,6 @@ namespace WorkingWithWcfService.EF
         public string RegionDescription { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Territory> Territories { get; set; }
+        public virtual ICollection<Territories> Territories { get; set; }
     }
 }
