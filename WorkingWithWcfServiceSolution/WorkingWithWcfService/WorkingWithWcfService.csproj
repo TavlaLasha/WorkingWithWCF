@@ -100,6 +100,7 @@
   <ItemGroup>
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Services\PriceManagement.svc" />
     <Content Include="Services\CatalogManagement.svc" />
     <Content Include="Services\Service1.svc" />
     <Content Include="Services\SalesManagement.svc" />
@@ -144,6 +145,10 @@
       <DependentUpon>202103311619336_addPriceChangesTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ServiceContracts\IPriceManagement.cs" />
+    <Compile Include="Services\PriceManagement.svc.cs">
+      <DependentUpon>PriceManagement.svc</DependentUpon>
+    </Compile>
     <Compile Include="Services\CatalogManagement.svc.cs">
       <DependentUpon>CatalogManagement.svc</DependentUpon>
     </Compile>

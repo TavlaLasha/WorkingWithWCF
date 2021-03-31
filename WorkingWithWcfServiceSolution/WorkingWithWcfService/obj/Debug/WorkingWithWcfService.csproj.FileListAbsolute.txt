@@ -48,3 +48,5 @@ F:\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\obj\Debug\
 F:\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\obj\Debug\WorkingWithWcfService.csprojAssemblyReference.cache
 F:\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\obj\Debug\WorkingWithWcfService.Migrations.addPriceChangesTable.resources
 F:\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\obj\Debug\WorkingWithWcfService.csproj.GenerateResource.cache
+C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\obj\Debug\WorkingWithWcfService.Migrations.addPriceChangesTable.resources
+C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\obj\Debug\WorkingWithWcfService.csproj.GenerateResource.Cache
