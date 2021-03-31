@@ -139,6 +139,11 @@
     <Compile Include="EF\Summary_of_Sales_by_Year.cs" />
     <Compile Include="EF\Suppliers.cs" />
     <Compile Include="EF\Territories.cs" />
+    <Compile Include="Migrations\202103311619336_addPriceChangesTable.cs" />
+    <Compile Include="Migrations\202103311619336_addPriceChangesTable.Designer.cs">
+      <DependentUpon>202103311619336_addPriceChangesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Services\CatalogManagement.svc.cs">
       <DependentUpon>CatalogManagement.svc</DependentUpon>
     </Compile>
@@ -167,6 +172,11 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202103311619336_addPriceChangesTable.resx">
+      <DependentUpon>202103311619336_addPriceChangesTable.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
