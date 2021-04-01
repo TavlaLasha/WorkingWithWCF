@@ -5,6 +5,11 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithWcfService", "WorkingWithWcfService\WorkingWithWcfService.csproj", "{A7940A66-AD4F-4B45-8D77-23749B7BB28F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinService", "WinService\WinService.csproj", "{13BB22FB-0DFA-4156-8F6B-9152992F3FEC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A7940A66-AD4F-4B45-8D77-23749B7BB28F} = {A7940A66-AD4F-4B45-8D77-23749B7BB28F}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +20,10 @@ Global
 		{A7940A66-AD4F-4B45-8D77-23749B7BB28F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7940A66-AD4F-4B45-8D77-23749B7BB28F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7940A66-AD4F-4B45-8D77-23749B7BB28F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13BB22FB-0DFA-4156-8F6B-9152992F3FEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13BB22FB-0DFA-4156-8F6B-9152992F3FEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13BB22FB-0DFA-4156-8F6B-9152992F3FEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13BB22FB-0DFA-4156-8F6B-9152992F3FEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
