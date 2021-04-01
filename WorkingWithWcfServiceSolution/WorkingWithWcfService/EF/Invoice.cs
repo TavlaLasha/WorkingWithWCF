@@ -6,7 +6,7 @@ namespace WorkingWithWcfService.EF
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class Invoices
+    public partial class Invoice
     {
         [StringLength(40)]
         public string ShipName { get; set; }

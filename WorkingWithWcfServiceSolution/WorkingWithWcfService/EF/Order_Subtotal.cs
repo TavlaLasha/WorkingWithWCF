@@ -7,7 +7,7 @@ namespace WorkingWithWcfService.EF
     using System.Data.Entity.Spatial;
 
     [Table("Order Subtotals")]
-    public partial class Order_Subtotals
+    public partial class Order_Subtotal
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]

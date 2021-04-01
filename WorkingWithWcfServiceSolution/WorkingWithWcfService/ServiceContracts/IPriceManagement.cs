@@ -15,5 +15,7 @@ namespace WorkingWithWcfService.ServiceContracts
         [OperationContract]
         [WebInvoke]
         bool AddNewProductPrice(int product_id, decimal price);
+        [OperationContract]
+        bool ChangeProductPrice(DateTime dt);
     }
 }

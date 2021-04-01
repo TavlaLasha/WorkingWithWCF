@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using WorkingWithWcfService.EF;
+using System.Data.Entity;
 
 namespace WorkingWithWcfService.ServiceContracts
 {
@@ -18,13 +19,47 @@ namespace WorkingWithWcfService.ServiceContracts
             {
                 using (NWDBContext db = new NWDBContext())
                 {
-                    PriceChanges pc = new PriceChanges();
+                    PriceChanx pc = new PriceChanx();
                     pc.ProductID = product_id;
                     pc.NewPrice = price;
                     pc.ChangedDate = DateTime.Now;
                     db.PriceChanges.Add(pc);
                     db.SaveChanges();
                     return true;
+                }
+            }
+            catch (Exception ee)
+            {
+                return false;
+            }
+        }
+
+        public bool ChangeProductPrice(DateTime dt)
+        {
+            try
+            {
+                using (NWDBContext db = new NWDBContext())
+                {
+                    using (DbContextTransaction transaction = db.Database.BeginTransaction())
+                    {
+                        try
+                        {
+                            var changes = db.PriceChanges.Where(i => i.ChangedDate.Year == dt.Year && i.ChangedDate.Month == dt.Month && i.ChangedDate.Day == dt.Day);
+                            changes.ToList().ForEach(i =>
+                            {
+                                Product p = db.Products.Where(t => t.ProductID == i.ProductID).First();
+                                p.UnitPrice = i.NewPrice;
+                            });
+                            db.SaveChanges();
+                            transaction.Commit();
+                            return true;
+                        }
+                        catch (Exception ex)
+                        {
+                            transaction.Rollback();
+                            throw ex;
+                        }
+                    }
                 }
             }
             catch (Exception ee)

@@ -20,7 +20,7 @@ namespace WorkingWithWcfService.Services
             {
                 using (NWDBContext db = new NWDBContext())
                 {
-                    Suppliers s = new Suppliers();
+                    Supplier s = new Supplier();
                     s.CompanyName = ob.CompName;
                     s.ContactName = ob.ContName;
                     s.ContactTitle = ob.ContTitle;
@@ -52,7 +52,7 @@ namespace WorkingWithWcfService.Services
                     if (!db.Suppliers.Any(i => i.SupplierID == supplierId))
                         throw new Exception("Order Not Found!");
 
-                    Suppliers od = db.Suppliers.Where(i => i.SupplierID == supplierId).First();
+                    Supplier od = db.Suppliers.Where(i => i.SupplierID == supplierId).First();
                     db.Suppliers.Remove(od);
                     db.SaveChanges();
                     return true;

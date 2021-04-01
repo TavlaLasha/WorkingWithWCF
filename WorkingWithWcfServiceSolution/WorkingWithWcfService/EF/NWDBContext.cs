@@ -1,10 +1,10 @@
-using System;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity;
-using System.Linq;
-
 namespace WorkingWithWcfService.EF
 {
+    using System;
+    using System.Data.Entity;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Linq;
+
     public partial class NWDBContext : DbContext
     {
         public NWDBContext()
@@ -12,63 +12,62 @@ namespace WorkingWithWcfService.EF
         {
         }
 
-        public virtual DbSet<Categories> Categories { get; set; }
-        public virtual DbSet<Cities> Cities { get; set; }
-        public virtual DbSet<Countries> Countries { get; set; }
-        public virtual DbSet<Products> Products { get; set; }
-        public virtual DbSet<Region> Region { get; set; }
-        public virtual DbSet<Shippers> Shippers { get; set; }
-        public virtual DbSet<Suppliers> Suppliers { get; set; }
-        public virtual DbSet<Territories> Territories { get; set; }
-        public virtual DbSet<CustomerDemographics> CustomerDemographics { get; set; }
-        public virtual DbSet<Customers> Customers { get; set; }
-        public virtual DbSet<Employees> Employees { get; set; }
-        public virtual DbSet<PriceChanges> PriceChanges { get; set; }
-        public virtual DbSet<Order_Details> Order_Details { get; set; }
-        public virtual DbSet<Orders> Orders { get; set; }
-        public virtual DbSet<Alphabetical_list_of_products> Alphabetical_list_of_products { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<City> Cities { get; set; }
+        public virtual DbSet<Country> Countries { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Region> Regions { get; set; }
+        public virtual DbSet<Shipper> Shippers { get; set; }
+        public virtual DbSet<Supplier> Suppliers { get; set; }
+        public virtual DbSet<Territory> Territories { get; set; }
+        public virtual DbSet<CustomerDemographic> CustomerDemographics { get; set; }
+        public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<PriceChanx> PriceChanges { get; set; }
+        public virtual DbSet<Order_Detail> Order_Details { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Alphabetical_list_of_product> Alphabetical_list_of_products { get; set; }
         public virtual DbSet<Category_Sales_for_1997> Category_Sales_for_1997 { get; set; }
-        public virtual DbSet<Current_Product_List> Current_Product_List { get; set; }
-        public virtual DbSet<Customer_and_Suppliers_by_City> Customer_and_Suppliers_by_City { get; set; }
-        public virtual DbSet<Invoices> Invoices { get; set; }
-        public virtual DbSet<Order_Details_Extended> Order_Details_Extended { get; set; }
-        public virtual DbSet<Order_Subtotals> Order_Subtotals { get; set; }
-        public virtual DbSet<Orders_Qry> Orders_Qry { get; set; }
+        public virtual DbSet<Current_Product_List> Current_Product_Lists { get; set; }
+        public virtual DbSet<Customer_and_Suppliers_by_City> Customer_and_Suppliers_by_Cities { get; set; }
+        public virtual DbSet<Invoice> Invoices { get; set; }
+        public virtual DbSet<Order_Details_Extended> Order_Details_Extendeds { get; set; }
+        public virtual DbSet<Order_Subtotal> Order_Subtotals { get; set; }
+        public virtual DbSet<Orders_Qry> Orders_Qries { get; set; }
         public virtual DbSet<Product_Sales_for_1997> Product_Sales_for_1997 { get; set; }
-        public virtual DbSet<Products_Above_Average_Price> Products_Above_Average_Price { get; set; }
-        public virtual DbSet<Products_by_Category> Products_by_Category { get; set; }
-        public virtual DbSet<Sales_by_Category> Sales_by_Category { get; set; }
-        public virtual DbSet<Sales_Totals_by_Amount> Sales_Totals_by_Amount { get; set; }
-        public virtual DbSet<Summary_of_Sales_by_Quarter> Summary_of_Sales_by_Quarter { get; set; }
-        public virtual DbSet<Summary_of_Sales_by_Year> Summary_of_Sales_by_Year { get; set; }
+        public virtual DbSet<Products_Above_Average_Price> Products_Above_Average_Prices { get; set; }
+        public virtual DbSet<Products_by_Category> Products_by_Categories { get; set; }
+        public virtual DbSet<Sales_by_Category> Sales_by_Categories { get; set; }
+        public virtual DbSet<Sales_Totals_by_Amount> Sales_Totals_by_Amounts { get; set; }
+        public virtual DbSet<Summary_of_Sales_by_Quarter> Summary_of_Sales_by_Quarters { get; set; }
+        public virtual DbSet<Summary_of_Sales_by_Year> Summary_of_Sales_by_Years { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Cities>()
+            modelBuilder.Entity<City>()
                 .HasMany(e => e.Employees)
-                .WithRequired(e => e.Cities)
-                .HasForeignKey(e => e.CityID)
+                .WithRequired(e => e.City)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Countries>()
+            modelBuilder.Entity<Country>()
                 .HasMany(e => e.Cities)
-                .WithRequired(e => e.Countries)
-                .HasForeignKey(e => e.CountryID)
+                .WithRequired(e => e.Country)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Countries>()
+            modelBuilder.Entity<Country>()
                 .HasMany(e => e.Employees)
-                .WithRequired(e => e.Countries)
-                .HasForeignKey(e => e.CountryID)
+                .WithRequired(e => e.Country)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Products>()
+            modelBuilder.Entity<Product>()
                 .Property(e => e.UnitPrice)
                 .HasPrecision(19, 4);
 
-            modelBuilder.Entity<Products>()
+            modelBuilder.Entity<Product>()
                 .HasMany(e => e.Order_Details)
-                .WithRequired(e => e.Products)
+                .WithRequired(e => e.Product)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Region>()
@@ -80,60 +79,60 @@ namespace WorkingWithWcfService.EF
                 .WithRequired(e => e.Region)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Shippers>()
+            modelBuilder.Entity<Shipper>()
                 .HasMany(e => e.Orders)
-                .WithOptional(e => e.Shippers)
+                .WithOptional(e => e.Shipper)
                 .HasForeignKey(e => e.ShipVia);
 
-            modelBuilder.Entity<Territories>()
+            modelBuilder.Entity<Territory>()
                 .Property(e => e.TerritoryDescription)
                 .IsFixedLength();
 
-            modelBuilder.Entity<CustomerDemographics>()
+            modelBuilder.Entity<CustomerDemographic>()
                 .Property(e => e.CustomerTypeID)
                 .IsFixedLength();
 
-            modelBuilder.Entity<CustomerDemographics>()
+            modelBuilder.Entity<CustomerDemographic>()
                 .HasMany(e => e.Customers)
                 .WithMany(e => e.CustomerDemographics)
                 .Map(m => m.ToTable("CustomerCustomerDemo", "Customers").MapLeftKey("CustomerTypeID").MapRightKey("CustomerID"));
 
-            modelBuilder.Entity<Customers>()
+            modelBuilder.Entity<Customer>()
                 .Property(e => e.CustomerID)
                 .IsFixedLength();
 
-            modelBuilder.Entity<Employees>()
+            modelBuilder.Entity<Employee>()
                 .HasMany(e => e.Employees1)
-                .WithOptional(e => e.Employees2)
+                .WithOptional(e => e.Employee1)
                 .HasForeignKey(e => e.ReportsTo);
 
-            modelBuilder.Entity<Employees>()
+            modelBuilder.Entity<Employee>()
                 .HasMany(e => e.Territories)
                 .WithMany(e => e.Employees)
                 .Map(m => m.ToTable("EmployeeTerritories", "Employees").MapLeftKey("EmployeeID").MapRightKey("TerritoryID"));
 
-            modelBuilder.Entity<PriceChanges>()
+            modelBuilder.Entity<PriceChanx>()
                 .Property(e => e.NewPrice)
                 .HasPrecision(19, 4);
 
-            modelBuilder.Entity<Order_Details>()
+            modelBuilder.Entity<Order_Detail>()
                 .Property(e => e.UnitPrice)
                 .HasPrecision(19, 4);
 
-            modelBuilder.Entity<Orders>()
+            modelBuilder.Entity<Order>()
                 .Property(e => e.CustomerID)
                 .IsFixedLength();
 
-            modelBuilder.Entity<Orders>()
+            modelBuilder.Entity<Order>()
                 .Property(e => e.Freight)
                 .HasPrecision(19, 4);
 
-            modelBuilder.Entity<Orders>()
+            modelBuilder.Entity<Order>()
                 .HasMany(e => e.Order_Details)
-                .WithRequired(e => e.Orders)
+                .WithRequired(e => e.Order)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Alphabetical_list_of_products>()
+            modelBuilder.Entity<Alphabetical_list_of_product>()
                 .Property(e => e.UnitPrice)
                 .HasPrecision(19, 4);
 
@@ -145,19 +144,19 @@ namespace WorkingWithWcfService.EF
                 .Property(e => e.Relationship)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Invoices>()
+            modelBuilder.Entity<Invoice>()
                 .Property(e => e.CustomerID)
                 .IsFixedLength();
 
-            modelBuilder.Entity<Invoices>()
+            modelBuilder.Entity<Invoice>()
                 .Property(e => e.UnitPrice)
                 .HasPrecision(19, 4);
 
-            modelBuilder.Entity<Invoices>()
+            modelBuilder.Entity<Invoice>()
                 .Property(e => e.ExtendedPrice)
                 .HasPrecision(19, 4);
 
-            modelBuilder.Entity<Invoices>()
+            modelBuilder.Entity<Invoice>()
                 .Property(e => e.Freight)
                 .HasPrecision(19, 4);
 
@@ -169,7 +168,7 @@ namespace WorkingWithWcfService.EF
                 .Property(e => e.ExtendedPrice)
                 .HasPrecision(19, 4);
 
-            modelBuilder.Entity<Order_Subtotals>()
+            modelBuilder.Entity<Order_Subtotal>()
                 .Property(e => e.Subtotal)
                 .HasPrecision(19, 4);
 

@@ -6,26 +6,27 @@ namespace WorkingWithWcfService.EF
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Catalogs.Countries")]
-    public partial class Countries
+    [Table("Catalogs.Territories")]
+    public partial class Territory
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Countries()
+        public Territory()
         {
-            Cities = new HashSet<Cities>();
-            Employees = new HashSet<Employees>();
+            Employees = new HashSet<Employee>();
         }
 
-        public int ID { get; set; }
+        [StringLength(20)]
+        public string TerritoryID { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string Name { get; set; }
+        public string TerritoryDescription { get; set; }
+
+        public int RegionID { get; set; }
+
+        public virtual Region Region { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Cities> Cities { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Employees> Employees { get; set; }
+        public virtual ICollection<Employee> Employees { get; set; }
     }
 }

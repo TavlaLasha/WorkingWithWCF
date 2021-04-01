@@ -7,7 +7,7 @@ namespace WorkingWithWcfService.EF
     using System.Data.Entity.Spatial;
 
     [Table("Alphabetical list of products")]
-    public partial class Alphabetical_list_of_products
+    public partial class Alphabetical_list_of_product
     {
         [Key]
         [Column(Order = 0)]

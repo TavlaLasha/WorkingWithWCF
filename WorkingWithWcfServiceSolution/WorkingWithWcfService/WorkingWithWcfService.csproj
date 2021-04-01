@@ -110,41 +110,38 @@
     <Compile Include="DataContracts\CompositeType.cs" />
     <Compile Include="DataContracts\OrderDTO.cs" />
     <Compile Include="DataContracts\SupplierDTO.cs" />
-    <Compile Include="EF\Alphabetical_list_of_products.cs" />
-    <Compile Include="EF\Categories.cs" />
+    <Compile Include="EF\Alphabetical_list_of_product.cs" />
+    <Compile Include="EF\Category.cs" />
     <Compile Include="EF\Category_Sales_for_1997.cs" />
-    <Compile Include="EF\Cities.cs" />
-    <Compile Include="EF\Countries.cs" />
+    <Compile Include="EF\City.cs" />
+    <Compile Include="EF\Country.cs" />
     <Compile Include="EF\Current_Product_List.cs" />
-    <Compile Include="EF\CustomerDemographics.cs" />
-    <Compile Include="EF\Customers.cs" />
+    <Compile Include="EF\Customer.cs" />
+    <Compile Include="EF\CustomerDemographic.cs" />
     <Compile Include="EF\Customer_and_Suppliers_by_City.cs" />
-    <Compile Include="EF\Employees.cs" />
-    <Compile Include="EF\Invoices.cs" />
+    <Compile Include="EF\C__MigrationHistory.cs" />
+    <Compile Include="EF\Employee.cs" />
+    <Compile Include="EF\Invoice.cs" />
     <Compile Include="EF\NWDBContext.cs" />
-    <Compile Include="EF\Orders.cs" />
+    <Compile Include="EF\Order.cs" />
     <Compile Include="EF\Orders_Qry.cs" />
-    <Compile Include="EF\Order_Details.cs" />
+    <Compile Include="EF\Order_Detail.cs" />
     <Compile Include="EF\Order_Details_Extended.cs" />
-    <Compile Include="EF\Order_Subtotals.cs" />
-    <Compile Include="EF\PriceChanges.cs" />
-    <Compile Include="EF\Products.cs" />
+    <Compile Include="EF\Order_Subtotal.cs" />
+    <Compile Include="EF\PriceChanx.cs" />
+    <Compile Include="EF\Product.cs" />
     <Compile Include="EF\Products_Above_Average_Price.cs" />
     <Compile Include="EF\Products_by_Category.cs" />
     <Compile Include="EF\Product_Sales_for_1997.cs" />
     <Compile Include="EF\Region.cs" />
     <Compile Include="EF\Sales_by_Category.cs" />
     <Compile Include="EF\Sales_Totals_by_Amount.cs" />
-    <Compile Include="EF\Shippers.cs" />
+    <Compile Include="EF\Shipper.cs" />
     <Compile Include="EF\Summary_of_Sales_by_Quarter.cs" />
     <Compile Include="EF\Summary_of_Sales_by_Year.cs" />
-    <Compile Include="EF\Suppliers.cs" />
-    <Compile Include="EF\Territories.cs" />
-    <Compile Include="Migrations\202103311619336_addPriceChangesTable.cs" />
-    <Compile Include="Migrations\202103311619336_addPriceChangesTable.Designer.cs">
-      <DependentUpon>202103311619336_addPriceChangesTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="EF\Supplier.cs" />
+    <Compile Include="EF\sysdiagram.cs" />
+    <Compile Include="EF\Territory.cs" />
     <Compile Include="ServiceContracts\IPriceManagement.cs" />
     <Compile Include="Services\PriceManagement.svc.cs">
       <DependentUpon>PriceManagement.svc</DependentUpon>
@@ -165,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -177,11 +175,6 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202103311619336_addPriceChangesTable.resx">
-      <DependentUpon>202103311619336_addPriceChangesTable.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

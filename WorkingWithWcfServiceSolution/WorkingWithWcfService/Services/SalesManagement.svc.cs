@@ -20,7 +20,7 @@ namespace WorkingWithWcfService.Services
             {
                 using (NWDBContext db = new NWDBContext())
                 {
-                    Orders od = new Orders();
+                    Order od = new Order();
 
                     od.CustomerID = ob.CustomerID;
                     od.EmployeeID = ob.EmployeeID;
@@ -121,7 +121,7 @@ namespace WorkingWithWcfService.Services
                     if (!db.Orders.Any(i => i.OrderID == id))
                         throw new Exception("Order Not Found!");
 
-                    Orders od =  db.Orders.Where(i => i.OrderID == id).First();
+                    Order od =  db.Orders.Where(i => i.OrderID == id).First();
                     db.Orders.Remove(od);
                     db.SaveChanges();
                     return true;
