@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 using System.Text;
 
 namespace WorkingWithWcfService.ServiceContracts
@@ -12,6 +13,7 @@ namespace WorkingWithWcfService.ServiceContracts
     public interface IPriceManagement
     {
         [OperationContract]
+        [WebInvoke]
         bool AddNewProductPrice(int product_id, decimal price);
     }
 }
