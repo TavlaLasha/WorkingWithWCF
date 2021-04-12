@@ -42,5 +42,23 @@ namespace ClientApp
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmAddCity f = new frmAddCity();
+                f.Show();
+
+                //Response<City> ct = JsonConvert.DeserializeObject<Response<City>>(result);
+                //if (ct.IsError)
+                //    throw new Exception(ct.ErrorMessage);
+                //dataGridView1.DataSource = ct.Data;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
