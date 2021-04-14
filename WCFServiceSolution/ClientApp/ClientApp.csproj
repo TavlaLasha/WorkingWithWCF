@@ -62,15 +62,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EF\Album.cs" />
-    <Compile Include="EF\City.cs" />
-    <Compile Include="EF\Country.cs" />
-    <Compile Include="EF\Genre.cs" />
-    <Compile Include="EF\Score.cs" />
-    <Compile Include="EF\Singer.cs" />
-    <Compile Include="EF\Song.cs" />
-    <Compile Include="EF\VoiceVoteDB.cs" />
-    <Compile Include="EF\Voter.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +74,12 @@
     <Compile Include="frmAddCity.Designer.cs">
       <DependentUpon>frmAddCity.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEditCity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditCity.Designer.cs">
+      <DependentUpon>frmEditCity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Response.cs" />
     <Compile Include="Program.cs" />
@@ -92,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddCity.resx">
       <DependentUpon>frmAddCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditCity.resx">
+      <DependentUpon>frmEditCity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -126,7 +126,6 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
