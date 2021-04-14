@@ -78,15 +78,6 @@ namespace ClientApp
                     StreamReader sReader = new StreamReader(reader);
                     string outResult = sReader.ReadToEnd();
                     sReader.Close();
-                    //using (VoiceVoteDB db = new VoiceVoteDB())
-                    //{
-                    //    if (!db.Cities.Any(i => i.City_Id == Id))
-                    //        throw new Exception("Product Not Found!");
-
-                    //    WCFService.EF.City p = db.Cities.Where(i => i.City_Id == Id).First();
-                    //    db.Cities.Remove(p);
-                    //    db.SaveChanges();
-                    //}
                     MessageBox.Show("ოპერაცია წარმატებულია!", "შეტყობინება", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }

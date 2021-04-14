@@ -36,7 +36,7 @@ namespace ClientApp
                 {
                     using (VoiceVoteDB db = new VoiceVoteDB())
                     {
-                        ClientApp.Models.City comp = new ClientApp.Models.City()
+                        Models.City comp = new Models.City()
                         {
                             CityName = textBox1.Text,
                             CountryId = (from c in db.Countries

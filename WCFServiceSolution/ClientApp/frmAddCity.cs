@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WCFService.EF;
+using ClientApp.Models;
 using WCFService.ServiceModels;
 
 namespace ClientApp
@@ -34,10 +35,10 @@ namespace ClientApp
                 {
                     using (VoiceVoteDB db = new VoiceVoteDB())
                     {
-                        City comp = new City()
+                        ClientApp.Models.City comp = new ClientApp.Models.City()
                         {
-                            City_Name = textBox1.Text,
-                            Country_Id = (from c in db.Countries
+                            CityName = textBox1.Text,
+                            CountryId = (from c in db.Countries
                                           where c.Country_Name == comboBox1.Text
                                           select c.Country_Id).FirstOrDefault()
                         };
