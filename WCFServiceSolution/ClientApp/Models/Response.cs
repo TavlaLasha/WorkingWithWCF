@@ -12,5 +12,6 @@ namespace WCFService.ServiceModels
         public bool IsError { get; set; }
         public string ErrorMessage { get; set; }
         public List<T> Data { get; set; }
+        public T Dat { get; set; }
     }
 }

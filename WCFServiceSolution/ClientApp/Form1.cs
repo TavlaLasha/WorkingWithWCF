@@ -14,6 +14,7 @@ using System.Web.Script.Serialization;
 using WCFService.ServiceModels;
 using Newtonsoft.Json;
 using WCFService.EF;
+using System.IO;
 
 namespace ClientApp
 {
@@ -65,15 +66,27 @@ namespace ClientApp
                 int Id = (int)row.Cells["CityId"].Value;
                 if (MessageBox.Show("Are You Sure?", "Question About Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    using (VoiceVoteDB db = new VoiceVoteDB())
-                    {
-                        if (!db.Cities.Any(i => i.City_Id == Id))
-                            throw new Exception("Product Not Found!");
+                    WebClient wbc = new WebClient();
+                    wbc.Encoding = UTF8Encoding.UTF8;
+                    wbc.BaseAddress = URL;
+                    WebRequest request = WebRequest.Create($"{URL}/DeleteCity/{Id}");
+                    request.Method = "DELETE";
+                    request.ContentType = "application/json; charset=utf-8";
+                    WebResponse responce = request.GetResponse();
+                    Stream reader = responce.GetResponseStream();
 
-                        WCFService.EF.City p = db.Cities.Where(i => i.City_Id == Id).First();
-                        db.Cities.Remove(p);
-                        db.SaveChanges();
-                    }
+                    StreamReader sReader = new StreamReader(reader);
+                    string outResult = sReader.ReadToEnd();
+                    sReader.Close();
+                    //using (VoiceVoteDB db = new VoiceVoteDB())
+                    //{
+                    //    if (!db.Cities.Any(i => i.City_Id == Id))
+                    //        throw new Exception("Product Not Found!");
+
+                    //    WCFService.EF.City p = db.Cities.Where(i => i.City_Id == Id).First();
+                    //    db.Cities.Remove(p);
+                    //    db.SaveChanges();
+                    //}
                     MessageBox.Show("ოპერაცია წარმატებულია!", "შეტყობინება", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
