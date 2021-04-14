@@ -78,6 +78,31 @@ namespace WCFService.ServiceContracts
             }
         }
 
+        public Response<CityDTO> GetCity(string cityId)
+        {
+            try
+            {
+                int Id;
+                if (!int.TryParse(cityId, out Id))
+                    throw new Exception($"Invalid city Id: {cityId} !");
+                using (VoiceVoteDB db = new VoiceVoteDB())
+                {
+                    var result = db.Cities.Where(i => i.City_Id == Id).Select(t =>
+                    new CityDTO
+                    {
+                        CityId = t.City_Id,
+                        CityName = t.City_Name,
+                        CountryId = t.Country_Id.HasValue ? t.Country_Id.Value : 0
+                    }).First();
+                    return new Response<CityDTO> { Data = result };
+                }
+            }
+            catch (Exception ex)
+            {
+                return new Response<CityDTO> { IsError = true, ErrorMessage = ex.Message };
+            }
+        }
+
         public Response<bool> UpdateCity(CityDTO ct)
         {
             try
