@@ -106,6 +106,7 @@
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="ServiceContracts\CityManagement.svc" />
+    <Content Include="ServiceContracts\CountryManagement.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -123,9 +124,14 @@
     <Compile Include="ServiceContracts\CityManagement.svc.cs">
       <DependentUpon>CityManagement.svc</DependentUpon>
     </Compile>
+    <Compile Include="ServiceContracts\CountryManagement.svc.cs">
+      <DependentUpon>CountryManagement.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceModels\CountryDTO.cs" />
     <Compile Include="Services\ICityManagement.cs" />
     <Compile Include="ServiceModels\CityDTO.cs" />
     <Compile Include="ServiceModels\Response.cs" />
+    <Compile Include="Services\ICountryManagement.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
