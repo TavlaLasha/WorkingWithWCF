@@ -13,6 +13,7 @@ namespace WorkingWithWcfService.EF
         public Product()
         {
             Order_Details = new HashSet<Order_Detail>();
+            PriceChanges = new HashSet<PriceChanx>();
         }
 
         public int ProductID { get; set; }
@@ -43,6 +44,9 @@ namespace WorkingWithWcfService.EF
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order_Detail> Order_Details { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PriceChanx> PriceChanges { get; set; }
 
         public virtual Supplier Supplier { get; set; }
     }

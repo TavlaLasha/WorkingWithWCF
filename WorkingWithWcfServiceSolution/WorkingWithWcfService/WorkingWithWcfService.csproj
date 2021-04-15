@@ -100,6 +100,7 @@
   <ItemGroup>
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Services\PriceManagement.svc" />
     <Content Include="Services\CatalogManagement.svc" />
     <Content Include="Services\Service1.svc" />
     <Content Include="Services\SalesManagement.svc" />
@@ -107,6 +108,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataContracts\CompositeType.cs" />
+    <Compile Include="DataContracts\OrderDTO.cs" />
+    <Compile Include="DataContracts\SupplierDTO.cs" />
     <Compile Include="EF\Alphabetical_list_of_product.cs" />
     <Compile Include="EF\Category.cs" />
     <Compile Include="EF\Category_Sales_for_1997.cs" />
@@ -116,6 +119,7 @@
     <Compile Include="EF\Customer.cs" />
     <Compile Include="EF\CustomerDemographic.cs" />
     <Compile Include="EF\Customer_and_Suppliers_by_City.cs" />
+    <Compile Include="EF\C__MigrationHistory.cs" />
     <Compile Include="EF\Employee.cs" />
     <Compile Include="EF\Invoice.cs" />
     <Compile Include="EF\NWDBContext.cs" />
@@ -124,6 +128,7 @@
     <Compile Include="EF\Order_Detail.cs" />
     <Compile Include="EF\Order_Details_Extended.cs" />
     <Compile Include="EF\Order_Subtotal.cs" />
+    <Compile Include="EF\PriceChanx.cs" />
     <Compile Include="EF\Product.cs" />
     <Compile Include="EF\Products_Above_Average_Price.cs" />
     <Compile Include="EF\Products_by_Category.cs" />
@@ -135,7 +140,12 @@
     <Compile Include="EF\Summary_of_Sales_by_Quarter.cs" />
     <Compile Include="EF\Summary_of_Sales_by_Year.cs" />
     <Compile Include="EF\Supplier.cs" />
+    <Compile Include="EF\sysdiagram.cs" />
     <Compile Include="EF\Territory.cs" />
+    <Compile Include="ServiceContracts\IPriceManagement.cs" />
+    <Compile Include="Services\PriceManagement.svc.cs">
+      <DependentUpon>PriceManagement.svc</DependentUpon>
+    </Compile>
     <Compile Include="Services\CatalogManagement.svc.cs">
       <DependentUpon>CatalogManagement.svc</DependentUpon>
     </Compile>
@@ -152,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

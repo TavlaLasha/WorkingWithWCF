@@ -1,10 +1,10 @@
-using System;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity;
-using System.Linq;
-
 namespace WorkingWithWcfService.EF
 {
+    using System;
+    using System.Data.Entity;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Linq;
+
     public partial class NWDBContext : DbContext
     {
         public NWDBContext()
@@ -22,7 +22,10 @@ namespace WorkingWithWcfService.EF
         public virtual DbSet<Territory> Territories { get; set; }
         public virtual DbSet<CustomerDemographic> CustomerDemographics { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<PriceChanx> PriceChanges { get; set; }
         public virtual DbSet<Order_Detail> Order_Details { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Alphabetical_list_of_product> Alphabetical_list_of_products { get; set; }
@@ -107,6 +110,10 @@ namespace WorkingWithWcfService.EF
                 .HasMany(e => e.Territories)
                 .WithMany(e => e.Employees)
                 .Map(m => m.ToTable("EmployeeTerritories", "Employees").MapLeftKey("EmployeeID").MapRightKey("TerritoryID"));
+
+            modelBuilder.Entity<PriceChanx>()
+                .Property(e => e.NewPrice)
+                .HasPrecision(19, 4);
 
             modelBuilder.Entity<Order_Detail>()
                 .Property(e => e.UnitPrice)

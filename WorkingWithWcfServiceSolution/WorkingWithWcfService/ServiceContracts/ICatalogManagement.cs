@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using WorkingWithWcfService.DataContracts;
 
 namespace WorkingWithWcfService.ServiceContracts
 {
@@ -12,6 +13,14 @@ namespace WorkingWithWcfService.ServiceContracts
     public interface ICatalogManagement
     {
         [OperationContract]
-        void DoWork();
+        SupplierDTO GetSupplier(int supplierId);
+
+        [OperationContract]
+        List<SupplierDTO> GetAllSuppliers();
+        [OperationContract]
+        bool AddSupplier(SupplierDTO ob);
+        [OperationContract]
+        bool DeleteSupplier(int supplierId);
+
     }
 }

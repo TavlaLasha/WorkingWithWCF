@@ -18,11 +18,13 @@ F:\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\bin\Micros
 F:\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\bin\Microsoft.AI.Web.xml
 F:\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\bin\Microsoft.AI.WindowsServer.xml
 F:\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\bin\Microsoft.ApplicationInsights.xml
-F:\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\obj\Debug\WorkingWithWcfService.csprojAssemblyReference.cache
 F:\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\obj\Debug\WorkingWithWcfService.csproj.CoreCompileInputs.cache
 F:\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\obj\Debug\WorkingWithWcfService.csproj.CopyComplete
 F:\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\obj\Debug\WorkingWithWcfService.dll
 F:\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\obj\Debug\WorkingWithWcfService.pdb
+F:\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\obj\Debug\WorkingWithWcfService.csprojAssemblyReference.cache
+F:\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\obj\Debug\WorkingWithWcfService.Migrations.addPriceChangesTable.resources
+F:\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\obj\Debug\WorkingWithWcfService.csproj.GenerateResource.cache
 C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\bin\ApplicationInsights.config
 C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\bin\WorkingWithWcfService.dll.config
 C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\bin\WorkingWithWcfService.dll
@@ -43,6 +45,6 @@ C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WorkingWithWcfServiceSolution\Worki
 C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\bin\Microsoft.AI.Web.xml
 C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\bin\Microsoft.ApplicationInsights.xml
-C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\obj\Debug\WorkingWithWcfService.csprojResolveAssemblyReference.cache
 C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\obj\Debug\WorkingWithWcfService.dll
 C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\obj\Debug\WorkingWithWcfService.pdb
+C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WorkingWithWcfServiceSolution\WorkingWithWcfService\obj\Debug\WorkingWithWcfService.csprojResolveAssemblyReference.cache

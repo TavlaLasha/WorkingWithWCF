@@ -4,6 +4,8 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using WorkingWithWcfService.DataContracts;
+using WorkingWithWcfService.EF;
 
 namespace WorkingWithWcfService.ServiceContracts
 {
@@ -12,6 +14,12 @@ namespace WorkingWithWcfService.ServiceContracts
     public interface ISalesManagement
     {
         [OperationContract]
-        void DoWork();
+        List<OrderDTO> GetAllOrder(int pageNumber, int pageSize=10);
+        [OperationContract]
+        OrderDTO GetOrder(int orderId);
+        [OperationContract]
+        bool AddOrder(OrderDTO ob);
+        [OperationContract]
+        bool DeleteOrder(int id);
     }
 }
