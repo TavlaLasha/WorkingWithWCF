@@ -17,7 +17,8 @@ using Newtonsoft.Json;
 namespace ClientApp
 {
     public partial class Form1 : Form
-    {
+    { 
+        //configurationSettings and URL are apparently obsolete
         string URL = ConfigurationSettings.AppSettings["OurService"];
         public Form1()
         {
