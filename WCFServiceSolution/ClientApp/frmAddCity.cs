@@ -52,12 +52,10 @@ namespace ClientApp
                         request.ContentType = "application/json; charset=utf-8";
 
                         string serOut = JsonConvert.SerializeObject(comp);
-
                         using (StreamWriter writer = new StreamWriter(request.GetRequestStream()))
                         {
                             writer.Write(serOut);
                         }
-
                         WebResponse responce = request.GetResponse();
                         Stream reader = responce.GetResponseStream();
 

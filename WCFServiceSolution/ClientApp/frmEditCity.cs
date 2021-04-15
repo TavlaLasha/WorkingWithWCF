@@ -43,32 +43,31 @@ namespace ClientApp
                                          where c.Country_Name == comboBox1.Text
                                          select c.Country_Id).FirstOrDefault()
                         };
-                        string output = JsonConvert.SerializeObject(comp);
+                        //string output = JsonConvert.SerializeObject(comp);
 
-                        string strUri = $"{URL}/UpdateCity";
-                        Uri uri = new Uri(strUri);
-                        WebRequest request = WebRequest.Create(uri);
-                        request.Method = "PUT";
-                        request.ContentLength = output.Length;
-                        request.ContentType = "application/json; charset=utf-8";
+                        //string strUri = $"{URL}/UpdateCity";
+                        //Uri uri = new Uri(strUri);
+                        //WebRequest request = WebRequest.Create(uri);
+                        //request.Method = "PUT";
+                        //request.ContentLength = output.Length;
+                        //request.ContentType = "application/json; charset=utf-8";
 
-                        string serOut = JsonConvert.SerializeObject(comp);
+                        //string serOut = JsonConvert.SerializeObject(comp);
 
-                        using (StreamWriter writer = new StreamWriter(request.GetRequestStream()))
-                        {
-                            writer.Write(serOut);
-                        }
+                        //using (StreamWriter writer = new StreamWriter(request.GetRequestStream()))
+                        //{
+                        //    writer.Write(serOut);
+                        //}
 
-                        WebResponse responce = request.GetResponse();
-                        Stream reader = responce.GetResponseStream();
+                        //WebResponse responce = request.GetResponse();
+                        //Stream reader = responce.GetResponseStream();
 
-                        StreamReader sReader = new StreamReader(reader);
-                        string outResult = sReader.ReadToEnd();
-                        Response<bool> cot = JsonConvert.DeserializeObject<Response<bool>>(sReader.ReadToEnd());
-                        if (cot.IsError)
-                            throw new Exception(cot.ErrorMessage);
-                        sReader.Close();
-
+                        //StreamReader sReader = new StreamReader(reader);
+                        //string outResult = sReader.ReadToEnd();
+                        //Response<bool> cot = JsonConvert.DeserializeObject<Response<bool>>(sReader.ReadToEnd());
+                        //if (cot.IsError)
+                        //    throw new Exception(cot.ErrorMessage);
+                        //sReader.Close();
 
                     }
 
