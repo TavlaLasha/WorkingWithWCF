@@ -12,3 +12,16 @@ C:\Users\lasha\Desktop\C#\WCF\WCFServiceSolution\ClientApp\bin\Debug\Newtonsoft.
 C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WCFServiceSolution\ClientApp\bin\Debug\ClientApp.exe.config
 C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.exe
 C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.pdb
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\ClientApp\bin\Debug\ClientApp.exe.config
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\ClientApp\bin\Debug\ClientApp.exe
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\ClientApp\bin\Debug\ClientApp.pdb
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\ClientApp\bin\Debug\Newtonsoft.Json.dll
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\ClientApp\bin\Debug\Newtonsoft.Json.xml
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.csprojAssemblyReference.cache
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.Form1.resources
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.Properties.Resources.resources
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.csproj.GenerateResource.cache
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.csproj.CoreCompileInputs.cache
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.csproj.CopyComplete
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.exe
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.pdb

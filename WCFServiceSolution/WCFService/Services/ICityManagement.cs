@@ -6,6 +6,7 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using WCFService.ServiceModels;
+using System.Xml;
 
 namespace WCFService.ServiceContracts
 {
@@ -14,16 +15,16 @@ namespace WCFService.ServiceContracts
     public interface ICityManagement
     {
         [OperationContract]
-        [WebInvoke(UriTemplate = "/AddNewCity", Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare)]
+        [WebInvoke(UriTemplate = "/AddNewCity", Method = "POST", RequestFormat = WebMessageFormat.Xml, ResponseFormat = WebMessageFormat.Xml, BodyStyle = WebMessageBodyStyle.Bare)]
         Response<bool> AddCity(CityDTO ct);
         [OperationContract]
-        [WebInvoke(UriTemplate = "/UpdateCity", Method = "PUT", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare)]
+        [WebInvoke(UriTemplate = "/UpdateCity", Method = "PUT", RequestFormat = WebMessageFormat.Xml, ResponseFormat = WebMessageFormat.Xml, BodyStyle = WebMessageBodyStyle.Bare)]
         Response<bool> UpdateCity(CityDTO ct);
         [OperationContract]
-        [WebInvoke(UriTemplate = "/DeleteCity/{cityId}", Method = "DELETE", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare)]
+        [WebInvoke(UriTemplate = "/DeleteCity/{cityId}", Method = "DELETE", RequestFormat = WebMessageFormat.Xml, ResponseFormat = WebMessageFormat.Xml, BodyStyle = WebMessageBodyStyle.Bare)]
         Response<bool> DeleteCity(string cityId);
         [OperationContract]
-        [WebGet(UriTemplate = "/GetAllCities", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare)]
-        Response<List<CityDTO>> GetAllCities();
+        [WebGet(UriTemplate = "/GetAllCities", RequestFormat = WebMessageFormat.Xml, ResponseFormat = WebMessageFormat.Xml, BodyStyle = WebMessageBodyStyle.Bare)]
+        Response<List<CityDTO>> GetAllCities(); 
     }
 }

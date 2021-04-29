@@ -23,3 +23,30 @@ C:\Users\lasha\Desktop\C#\WCF\WCFServiceSolution\WCFService\obj\Debug\WCFService
 C:\Users\lasha\Desktop\C#\WCF\WCFServiceSolution\WCFService\obj\Debug\WCFService.csprojResolveAssemblyReference.cache
 C:\Users\lasha\Desktop\C#\WCF\WCFServiceSolution\WCFService\bin\Newtonsoft.Json.dll
 C:\Users\lasha\Desktop\C#\WCF\WCFServiceSolution\WCFService\bin\Newtonsoft.Json.xml
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\bin\ApplicationInsights.config
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\bin\WCFService.dll.config
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\bin\WCFService.dll
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\bin\WCFService.pdb
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\bin\EntityFramework.dll
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\bin\EntityFramework.SqlServer.dll
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\bin\Microsoft.AI.DependencyCollector.dll
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\bin\Microsoft.AI.Web.dll
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\bin\Microsoft.AI.WindowsServer.dll
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\bin\Microsoft.ApplicationInsights.dll
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\bin\Newtonsoft.Json.dll
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\bin\EntityFramework.xml
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\bin\EntityFramework.SqlServer.xml
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\bin\Microsoft.AI.DependencyCollector.xml
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\bin\Microsoft.AI.Web.xml
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\bin\Microsoft.AI.WindowsServer.xml
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\bin\Microsoft.ApplicationInsights.xml
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\bin\Newtonsoft.Json.xml
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\obj\Debug\WCFService.csprojAssemblyReference.cache
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\obj\Debug\WCFService.csproj.CoreCompileInputs.cache
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\obj\Debug\WCFService.csproj.CopyComplete
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\obj\Debug\WCFService.dll
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\WCFService\obj\Debug\WCFService.pdb

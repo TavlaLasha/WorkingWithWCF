@@ -32,7 +32,7 @@ namespace WCFService.ServiceContracts
                 return new Response<bool> { IsError = true, ErrorMessage = ex.Message };
             }
         }
-
+         
         public Response<bool> DeleteCity(string cityId)
         {
             try
