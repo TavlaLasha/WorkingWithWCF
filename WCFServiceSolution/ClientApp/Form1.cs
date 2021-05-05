@@ -99,5 +99,11 @@ namespace ClientApp
             }
 
         }
+
+        private void AddCity_Click(object sender, EventArgs e)
+        {
+            AddCity AddCity = new AddCity();
+            AddCity.Show();
+        }
     }
 }

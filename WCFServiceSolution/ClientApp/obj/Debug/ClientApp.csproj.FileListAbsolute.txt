@@ -25,3 +25,4 @@ E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSol
 E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.csproj.CopyComplete
 E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.exe
 E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.pdb
+E:\Gios polderi\University\Y4 S2\C# web\midterm 1\b\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.AddCity.resources
