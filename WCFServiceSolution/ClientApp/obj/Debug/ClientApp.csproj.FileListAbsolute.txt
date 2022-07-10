@@ -21,3 +21,17 @@ C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\De
 C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.Properties.Resources.resources
 C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.csproj.GenerateResource.Cache
 C:\Users\lasha\Desktop\C#\WCF\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.FrmCity.resources
+F:\Desktop\Lasha\GAU\C#\WCF\WorkingWithWCF\WCFServiceSolution\ClientApp\bin\Debug\ClientApp.exe.config
+F:\Desktop\Lasha\GAU\C#\WCF\WorkingWithWCF\WCFServiceSolution\ClientApp\bin\Debug\ClientApp.exe
+F:\Desktop\Lasha\GAU\C#\WCF\WorkingWithWCF\WCFServiceSolution\ClientApp\bin\Debug\ClientApp.pdb
+F:\Desktop\Lasha\GAU\C#\WCF\WorkingWithWCF\WCFServiceSolution\ClientApp\bin\Debug\Newtonsoft.Json.dll
+F:\Desktop\Lasha\GAU\C#\WCF\WorkingWithWCF\WCFServiceSolution\ClientApp\bin\Debug\Newtonsoft.Json.xml
+F:\Desktop\Lasha\GAU\C#\WCF\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.csproj.AssemblyReference.cache
+F:\Desktop\Lasha\GAU\C#\WCF\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.Form1.resources
+F:\Desktop\Lasha\GAU\C#\WCF\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.FrmCity.resources
+F:\Desktop\Lasha\GAU\C#\WCF\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.Properties.Resources.resources
+F:\Desktop\Lasha\GAU\C#\WCF\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.csproj.GenerateResource.cache
+F:\Desktop\Lasha\GAU\C#\WCF\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.csproj.CoreCompileInputs.cache
+F:\Desktop\Lasha\GAU\C#\WCF\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.csproj.CopyComplete
+F:\Desktop\Lasha\GAU\C#\WCF\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.exe
+F:\Desktop\Lasha\GAU\C#\WCF\WorkingWithWCF\WCFServiceSolution\ClientApp\obj\Debug\ClientApp.pdb

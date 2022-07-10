@@ -44,7 +44,7 @@ namespace ClientApp
                 if (!Id.HasValue)
                     ct = new City();
                 else
-                    ct.CityId = Id.HasValue?Id.Value:0;
+                    ct.CityId = Id ?? 0;
 
                 ct.CityName = textBox_Name.Text;
                 ct.CountryId = Convert.ToInt32(comboBox_Country.SelectedValue);

@@ -19,6 +19,7 @@ namespace ClientApp
 {
     public partial class Form1 : Form
     {
+        //[Obsolete]
         string CityURL = ConfigurationSettings.AppSettings["CityService"];
         public Form1()
         {
